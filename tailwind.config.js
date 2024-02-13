@@ -46,7 +46,7 @@ export default {
         'main': ['Montserrat'],
       },
 
-      fonts: {
+      fontSize: {
         'hero-h1': ['38px', {
           lineHeight: '46px',
           fontWeight: '700',
