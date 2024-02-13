@@ -30,11 +30,17 @@ export default {
         'grey-bg-alt': '#EDEDF7',
         'grey-text': '#B3B3BA',
         'grey-separator': '#E6E6F0',
-
-        /* gradient colors */
       },
 
+      /* gradient colors */
 
+      backgroundImage: (theme) => ({
+        'initial': 'linear-gradient(140deg, rgba(49,49,99,1) 0%, rgba(123,66,96,1) 100%)',
+        'soft': 'linear-gradient(93deg, rgba(52,50,99,1) 0%, rgba(123,66,95,1) 100%)',
+        'red': 'linear-gradient(172deg, rgba(104,49,99,1) 0%, rgba(177,33,94,1) 100%)',
+        'superSoft': 'linear-gradient(35deg, rgba(99,61,113,1) 0%, rgba(49,49,99,1) 100%)',
+        'redText': 'linear-gradient(90deg, rgba(240,19,89,1) 0%, rgba(239,128,128,1) 100%)',
+      }),
 
       fontFamily: {
         'main': ['Montserrat'],
@@ -59,7 +65,8 @@ export default {
         'h3-caps': ['22px', {
           lineHeight: '27px',
           fontWeight: '700',
-        }, capitalize],
+          textTransform: 'capitalize'
+        }],
         
         'h4': ['16px', {
           lineHeight: '20px',
