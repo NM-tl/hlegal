@@ -39,6 +39,33 @@ npm run dev
 # If using yarn
 yarn dev
 ```
+## Contributors
+
+<table>
+   <tr>
+    <td align="center">
+        <a href="https://github.com/Vladyslav-Markevych">
+            <img src="https://avatars.githubusercontent.com/u/153658827?v=4" width="100;" alt="Vladyslav-Markevych"/>
+            <br />
+            <sub><b>Vladyslav-Markevych</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/NM-tl">
+            <img src="https://avatars.githubusercontent.com/u/30575825?v=4" width="100;" alt="MrChocolatine"/>
+            <br />
+            <sub><b>Nikita Maiboroda</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/qqdashkan">
+            <img src="https://avatars.githubusercontent.com/u/100764491?v=4" width="100;" alt="matks"/>
+            <br />
+            <sub><b>Daria Neshcheretnaya</b></sub>
+        </a>
+    </td>
+   </tr>
+</table>
 
 ## License
 
