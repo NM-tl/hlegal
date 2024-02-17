@@ -62,6 +62,11 @@ export default {
           fontWeight: '700',
         }],
 
+        'h1': ['36px', {
+          lineHeight: '44px',
+          fontWeight: '400',
+        }],
+
         'h2': ['30px', {
           lineHeight: '36px',
           fontWeight: '700',
