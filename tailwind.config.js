@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
+    "./components.html",
     "./pages/**/*.html"
   ],
   theme: {
@@ -11,6 +13,10 @@ export default {
     },
 
     extend: { 
+      fontFamily: {
+        'main': ['Montserrat', 'sans-serif'],
+      },
+
       colors: {
         /* main colors */
         'main': '#323264',
@@ -92,6 +98,9 @@ export default {
           fontWeight: '400',
         }],
       },
+    },
+    maxWidth: {
+      'mainWrapper': '1440px',
     },
 
   plugins: [],

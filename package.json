@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.17",
+    "material-symbols": "^0.15.0",
     "postcss": "^8.4.35"
   }
 }

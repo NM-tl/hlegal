@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>hlegal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-800">
+    <header class="shadow-lg w-full">
+        <nav class="py-4 px-4 max-w-7xl m-auto">
+            <ul class="flex w-full items-center text-white justify-between font-semibold">
+                <li><a href="/">Home</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/services.html">Services</a></li>
+                <li><a href="./pages/service.html">Service-singl</a></li>
+                <li><a href="./pages/publications.html">Publications</a></li>
+                <li><a href="./pages/publication.html">Publication-singl</a></li>
+                <li><a href="./pages/team.html">Team</a></li>
+                <li><a href="./pages/teammate.html">Teammate-singl</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a href="./pages/contact-modal.html">Contact-modal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="px-4 py-5 flex flex-col gap-8 text-white">
+        <!-- Test class from config -->
+        <h1 class="text-hero-h1">Components to use:</h1> 
+        <!-- Test gradient from config -->
+        <div class="w-fit py-8 px-4 rounded-md bg-red">Content with gradient background</div>
+        <!-- Using gradient in text -->
+        <h3 class="bg-redText inline-block text-transparent bg-clip-text">Gradient Text</h3>
+        <!-- Test img -->
+        <img 
+            src="./images/about/Achievment-1.png" 
+            alt="test" 
+            class="w-10 h-auto"
+        />
+        <!-- buttons -->
+        <h2 class="text-hero-h1">Buttons components:</h2> 
+        <span>
+            <button type="button" class="inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark">
+                <p class="mx-auto">Send message</p>
+            </button>
+        </span>
+        <!-- button progress -->
+        <span>
+            <button type="button" class="inline-flex items-center bg-grey-bg-alt rounded-xl w-44 h-14" disabled>
+                <svg aria-hidden="true" class="inline mx-auto w-6 h-6 text-gray-200 animate-spin dark:text-gray-600 fill-active-regular" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>
+                <span class="sr-only">Loading...</span>
+            </button>
+        </span>
+        <!-- button response -->
+        <span>
+            <button type="button" class="inline-flex items-center rounded-xl bg-grey-bg-alt w-44 h-14 font-main text-link-font font-bold text-main">
+                <p class="mx-auto">Sent</p>
+            </button>
+        </span>
+    </div>
+    <h2 class="text-hero-h1 text-white ml-5 mt-5">SVG sprites:</h2> 
+    <div class="my-5 flex flex-col gap-5 px-5">
+        <!-- social sprites -->
+        <div class="flex gap-5 items-center">
+            <a href="#" class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="24px" height="24px">
+                    <use xlink:href="./images/icons/social.svg#icon-Facebook"></use>
+                </svg>
+            </a>
+            <a href="#" class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="24px" height="24px">
+                    <use xlink:href="./images/icons/social.svg#icon-Telegram"></use>
+                </svg>
+            </a>
+            <a href="#" class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="24px" height="24px">
+                    <use xlink:href="./images/icons/social.svg#icon-LinkedIn"></use>
+                </svg>
+            </a>
+        </div>
+         <!-- services sprites -->
+        <div class="flex gap-10 items-center">
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Support" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Ecommerce" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Coprorate" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Court" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Trust" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+            <span class="w-6 h-6 transition-transform hover:scale-105">
+                <svg class="icon" aria-hidden="true" width="48px" height="48px">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#F0145A" />
+                            <stop offset="100%" style="stop-color:#EF8080" />
+                        </linearGradient>
+                    </defs>
+                    <use xlink:href="./images/icons/services.svg#icon-Protection" fill="url(#gradient)"></use>
+                </svg>                                
+            </span>
+        </div>
+        <div class="flex gap-5 items-center"></div>
+    </div>
+    <!-- Material icons -->
+    <h2 class="text-hero-h1 text-white ml-5 mt-5">Material icons:</h2> 
+    <div class="flex items-center gap-10 text-white mt-5 px-5 pb-10">
+        <span class="material-symbols-outlined">face</span> <!-- Outlined -->
+        <span class="material-symbols-rounded">face</span>  <!-- Rounded -->
+        <span class="material-symbols-sharp">face</span>    <!-- Sharp -->
+    </div>
+</body>
+</html> 
