@@ -99,8 +99,12 @@ export default {
         }],
       },
     },
+
+    /* Wrappers */
     maxWidth: {
-      'mainWrapper': '1440px',
+      'desc-wrapper': '1440px',
+      'tab-wrapper': '768px',
+      'mob-wrapper': '375px',
     },
 
   plugins: [],
