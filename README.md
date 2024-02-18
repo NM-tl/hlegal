@@ -1,72 +1,42 @@
-# hlegal
+# Simple Vite Template
 
-## Demo
+## You vison is your path
 
-- **Development Version:** [Visit Demo](https://hlegal-dev.netlify.app/)
-- **Production Version:** [https://hlegal.vercel.app/](https://hlegal.vercel.app/)
+Template created to provide clarity in creating a simple webpage with the assistance of external dependencies. The main objective is to serve as a tool for facilitating the utilization of components and modules in HTML projects.
 
-## Deployment Status
+This template was developed using Vite.js, DaisyUI (Tailwind CSS Components), and the capability to easily include external libraries like Swiper.
 
-- **Development Version (Netlify):** [![Netlify Status](https://api.netlify.com/api/v1/badges/1bf2068f-11d2-4048-898e-94ef32b67a25/deploy-status)](https://app.netlify.com/sites/hlegal-dev/deploys)
-- **Production Version (Vercel):** ![Vercel Status](https://vercel.com/your-username/your-project-id/your-deployment-id/badge)
+> **Compatibility Note:**
+> Vite requires [Node.js](https://nodejs.org/en/) version 14.18+, 16+. However, some templates require a higher Node.js version to work, please upgrade if your package manager warns about it.
 
-# Install
+Clone project:
 
-To run this project locally, follow these steps:
-
-##Clone the repository:
-
-   ```bash
-   git clone https://github.com/NM-tl/hlegal.git
-
-1. Navigate to the project directory:
-
-cd hlegal
-
-2. Install dependencies:
-
-# If using npm
-npm install
-
-# If using yarn
-yarn
-
-3. Run the development server:
-
-# If using npm
-npm run dev
-
-# If using yarn
-yarn dev
+```bash
+git@github.com:rahxd1/simple-vite-template-vanilla.git
 ```
-## Contributors
 
-<table>
-   <tr>
-    <td align="center">
-        <a href="https://github.com/Vladyslav-Markevych">
-            <img src="https://avatars.githubusercontent.com/u/153658827?v=4" width="100;" alt="Vladyslav-Markevych"/>
-            <br />
-            <sub><b>Vladyslav-Markevych</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/NM-tl">
-            <img src="https://avatars.githubusercontent.com/u/30575825?v=4" width="100;" alt="MrChocolatine"/>
-            <br />
-            <sub><b>Nikita Maiboroda</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/qqdashkan">
-            <img src="https://avatars.githubusercontent.com/u/100764491?v=4" width="100;" alt="matks"/>
-            <br />
-            <sub><b>Daria Neshcheretnaya</b></sub>
-        </a>
-    </td>
-   </tr>
-</table>
+Install:
 
-## License
+```bash
+cd simple-vite-template-vanilla
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+npm install
+```
+
+Run dev:
+
+```bash
+npm run dev
+```
+
+Run build:
+
+```bash
+npm run build
+```
+
+![image](https://drive.google.com/uc?export=view&id=1Mn0uoqt9QVaStV5hAg0_YDCVg7M7YTYF)
+
+![image](https://drive.google.com/uc?export=view&id=1R31pmCHvEfHe1oUiu0z_CajG4vMnGerz)
+
+![image](https://drive.google.com/uc?export=view&id=1qNWPg43PchfsaZfVE8viiwTryQgRshIt)
