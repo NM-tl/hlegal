@@ -134,6 +134,13 @@ export default {
             fontWeight: "400",
           },
         ],
+        "number-about": [
+          "36px",
+          {
+            lineHeight: "44px",
+            fontWeight: "700",
+          },
+        ],
       },
     },
 
