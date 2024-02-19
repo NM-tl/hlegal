@@ -3,6 +3,10 @@
 export default {
   content: ["./index.html", "./components.html", "./pages/**/*.html"],
   theme: {
+    screens: {
+      'xs': '375px',
+    },
+
     fontWeight: {
       normal: "400",
       bold: "700",
