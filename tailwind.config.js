@@ -141,6 +141,27 @@ export default {
             fontWeight: "700",
           },
         ],
+        "team-md": [
+          "46px",
+          {
+            lineHeight: "56px",
+            fontWeight: "700",
+          },
+        ],
+        "team-lg": [
+          "86px",
+          {
+            lineHeight: "105px",
+            fontWeight: "700",
+          },
+        ],
+        "team-xl": [
+          "96px",
+          {
+            lineHeight: "117px",
+            fontWeight: "700",
+          },
+        ],
       },
     },
 
