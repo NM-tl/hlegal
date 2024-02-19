@@ -7,7 +7,9 @@ export default {
       'xs': '375px',
       'md': '768px',
       'lg': '1024px',
+      'xl': '1280px',
       'sd': '1440px',
+      '2xl':'1536px',
       'hd': '1920px',
     },
 
