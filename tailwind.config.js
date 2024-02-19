@@ -5,6 +5,10 @@ export default {
   theme: {
     screens: {
       'xs': '375px',
+      'md': '768px',
+      'lg': '1024px',
+      'sd': '1440px',
+      'hd': '1920px',
     },
 
     fontWeight: {
