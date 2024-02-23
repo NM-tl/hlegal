@@ -30,6 +30,11 @@ footer {
     height: 60px;
 }
 
+.swiper-slide img.team {
+    display: block;
+    height: unset;
+}
+
 span.swiper-pagination-bullet {
     width: 16px;
     height: 16px;
