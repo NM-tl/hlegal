@@ -178,6 +178,7 @@ export default {
     /* Wrappers */
     maxWidth: {
       "desc-wrapper": "1440px",
+      "lg": "1280px",
       "tab-wrapper": "768px",
       "mob-wrapper": "375px",
     },

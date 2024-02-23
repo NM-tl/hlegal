@@ -10,3 +10,33 @@ body,
 footer {
     font-family: 'Montserrat', sans-serif;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 60px;
+}
+
+span.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: #24A3FF;
+    opacity: 0.2;
+}
+
+span.swiper-pagination-bullet-active {
+    opacity: 1;
+}

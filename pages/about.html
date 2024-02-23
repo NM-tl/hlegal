@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
+    <!-- swiper slider scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <script defer src="../assets/sliders/aboutSlider.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="bg-slate-800">
     <header class="shadow-lg w-full">
@@ -340,7 +344,8 @@
       </section>
       <!-- team photo -->
       <section
-        class="m-auto bg-[url('../images/about/Team.jpg')] bg-no-repeat bg-center bg-cover max-w-[1920px] h-[30vw] 2xl:max-h-[584px] flex justify-center items-center"
+        style="background-image: url(../images/about/Team.jpg)"
+        class="m-auto bg-no-repeat bg-center bg-cover max-w-[1920px] h-[30vw] 2xl:max-h-[584px] flex justify-center items-center"
       >
         <p
           class="text-white opacity-80 text-number-about tracking-[3.5vw] md:text-team-md md:tracking-[63px] lg:text-team-lg xl:text-team-xl"
@@ -376,6 +381,15 @@
           </h2>
         </div>
       </section>
+      <section class="w-full bg-grey-bg">
+        <div class="max-w-desc-wrapper m-auto relative flex flex-col gap-8 py-8 px-4">
+          <h2 class="uppercase text-h3 text-center">achievements</h2>
+          <div class="swiper-container partners overflow-hidden">
+            <div class="swiper-wrapper mb-10"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <h1 class="text-white text-2xl px-4 py-5">About page</h1>
@@ -388,5 +402,61 @@
         component
       </button>
     </a>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.partners', {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            996: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1440: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+          },
+        });
+
+        const imgs = [
+            "Achievment-1", 
+            "Achievment-2", 
+            "Achievment-3", 
+            "Achievment-4"
+        ];
+
+        const achievmentsWrapper = document.querySelector(".swiper-wrapper");
+
+        if (achievmentsWrapper) {
+              for (let i = 0; i < 2; i++) {
+                  imgs.forEach((img) => {
+                    achievmentsWrapper.innerHTML += `
+                        <div class="swiper-slide py-6 px-20 rounded-xl">
+                            <img src="../../images/about/${img}.png" alt="achievement" />
+                        </div>
+                    `;
+                  });
+              }
+          }
+
+      });
+    </script>
   </body>
 </html>
