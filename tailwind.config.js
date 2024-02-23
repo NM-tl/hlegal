@@ -4,13 +4,13 @@ export default {
   content: ["./index.html", "./components.html", "./pages/**/*.html"],
   theme: {
     screens: {
-      'xs': '375px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      'sd': '1440px',
-      '2xl':'1536px',
-      'hd': '1920px',
+      xs: "375px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      sd: "1440px",
+      "2xl": "1536px",
+      hd: "1920px",
     },
 
     fontWeight: {
@@ -120,6 +120,21 @@ export default {
           {
             lineHeight: "26px",
             fontWeight: "400",
+          },
+        ],
+        "footer-font": [
+          "16px",
+          {
+            lineHeight: "20px",
+            fontWeight: "400",
+          },
+        ],
+        "footer-map": [
+          "12px",
+          {
+            lineHeight: "15px",
+            fontWeight: "700",
+            letterSpacing: "1px",
           },
         ],
         "paragraph-about": [
