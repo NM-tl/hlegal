@@ -4,13 +4,13 @@ export default {
   content: ["./index.html", "./components.html", "./pages/**/*.html"],
   theme: {
     screens: {
-      'xs': '375px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      'sd': '1440px',
-      '2xl':'1536px',
-      'hd': '1920px',
+      xs: "375px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      sd: "1440px",
+      "2xl": "1536px",
+      hd: "1920px",
     },
 
     fontWeight: {
@@ -122,6 +122,28 @@ export default {
             fontWeight: "400",
           },
         ],
+        "footer-font": [
+          "16px",
+          {
+            lineHeight: "20px",
+            fontWeight: "400",
+          },
+        ],
+        "paragraph-12": [
+          "12px",
+          {
+            lineHeight: "15px",
+            fontWeight: "700",
+            letterSpacing: "1px",
+          },
+        ],
+        "paragraph-14": [
+          "14px",
+          {
+            lineHeight: "22px",
+            fontWeight: "400",
+          },
+        ],
         "paragraph-about": [
           "19px",
           {
@@ -181,6 +203,9 @@ export default {
       "lg": "1280px",
       "tab-wrapper": "768px",
       "mob-wrapper": "375px",
+      "publications-xs": "400px",
+      "publications-md": "648px",
+      "publications-lg": "1600px",
     },
 
     plugins: [],

@@ -12,26 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="bg-slate-800">
-    <header class="shadow-lg w-full">
-      <nav class="py-4 px-4 max-w-7xl m-auto">
-        <ul
-          class="flex w-full items-center text-white justify-between font-semibold"
-        >
-          <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/services.html">Services</a></li>
-          <li><a href="/pages/service.html">Service-singl</a></li>
-          <li><a href="/pages/publications.html">Publications</a></li>
-          <li><a href="/pages/publication.html">Publication-singl</a></li>
-          <li><a href="/pages/team.html">Team</a></li>
-          <li><a href="/pages/teammate.html">Teammate-singl</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
-          <li><a href="/pages/contact-modal.html">Contact-modal</a></li>
-        </ul>
-      </nav>
-    </header>
     <!-- header -->
-    <section class="bg-white px-[15px] md:px-[60px] md:pt-[20px] lg:pt-[50px]">
+    <header class="bg-white px-[15px] md:px-[60px] md:pt-[20px] lg:pt-[50px]">
       <!-- first mobile -->
       <div
         class="flex justify-between items-center py-[10px] md:justify-start md:py-[30px] lg:hidden"
@@ -224,7 +206,7 @@
               <li>
                 <!-- At first it will be active by default -->
                 <a
-                  href="./pages/about.html"
+                  href="./about.html"
                   class="transition-all text-accent-color pb-0.5 border-b-2 border-accent-color"
                 >
                   About us
@@ -232,7 +214,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/services.html"
+                  href="./services.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Services
@@ -240,7 +222,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/team.html"
+                  href="./team.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Team
@@ -248,7 +230,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/publications.html"
+                  href="./publications.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Publications
@@ -256,7 +238,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/contact.html"
+                  href="../pages/contact.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Contact
@@ -266,7 +248,7 @@
           </nav>
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- main -->
     <main class="bg-white">
@@ -392,12 +374,13 @@
       </section>
     </main>
 
-    <h1 class="text-white text-2xl px-4 py-5">About page</h1>
+      <!-- achievements -->
+      <section></section>
+    </main>
 
-    <!-- Components page -->
-    <a href="../components.html">
-      <button
-        class="absolute right-5 bottom-5 text-white border border-white px-5 py-3 rounded-md"
+    <footer class="bg-white px-[30px] md:px-[60px]">
+      <div
+        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
       >
         component
       </button>
@@ -458,5 +441,40 @@
 
       });
     </script>
+        <div>
+          <div class="flex flex-col items-center gap-[10px] md:flex-row">
+            <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+          </div>
+          <div
+            class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+          >
+            <img src="../images/footer/facebook.svg" alt="facebook" />
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a href="tel:+380800211927" class="text-h4 text-main-alt">
+              0800 211 927
+            </a>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a
+              class="text-h4 text-active-regular hover:text-accent-color"
+              href="mailto:contact@forstudy.space"
+              >contact@forstudy.space</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-[10px]">
+          <p class="text-footer-font text-grey-text">
+            © 2021 HLEGAL Law company, LLC
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
