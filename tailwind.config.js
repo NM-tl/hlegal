@@ -129,12 +129,19 @@ export default {
             fontWeight: "400",
           },
         ],
-        "footer-map": [
+        "paragraph-12": [
           "12px",
           {
             lineHeight: "15px",
             fontWeight: "700",
             letterSpacing: "1px",
+          },
+        ],
+        "paragraph-14": [
+          "14px",
+          {
+            lineHeight: "22px",
+            fontWeight: "400",
           },
         ],
         "paragraph-about": [
@@ -195,6 +202,9 @@ export default {
       "desc-wrapper": "1440px",
       "tab-wrapper": "768px",
       "mob-wrapper": "375px",
+      "publications-xs": "400px",
+      "publications-md": "648px",
+      "publications-lg": "1600px",
     },
 
     plugins: [],
