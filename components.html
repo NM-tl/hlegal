@@ -550,6 +550,7 @@
         const swiper = new Swiper('.partners', {
           spaceBetween: 40,
           slidesPerView: 1,
+          loop: true,
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -563,5 +564,57 @@
     ); 
     </script>
 
+  <!--  Contact modal btn -->
+  <button
+    type="button"
+    class="modalBtn inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+  >
+    <p class="mx-auto">Free consultation</p>
+  </button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const consultationButton = document.querySelector(".modalBtn");
+      const modal = document.querySelector(".modal");
+      const cancelButtons = document.querySelectorAll(".modalClose");
+
+      const showModal = () => modal.classList.remove('hidden');
+      const hideModal = () => modal.classList.add('hidden');
+
+      consultationButton.addEventListener("click", showModal);
+      modal.addEventListener("click", (event) => event.target === modal && hideModal());
+
+      cancelButtons.forEach(button => {
+          button.addEventListener("click", hideModal);
+      });
+
+      document.addEventListener("keydown", (event) => event.key === "Escape" && hideModal());
+    });
+  </script>
+  <div class="modal relative z-10 hidden" aria-labelledby="modal-title" role="dialog">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+          <div class="relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+            <button type="button" class="modalClose absolute right-4 top-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-modal-close">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>              
+            </button>
+            <div class="bg-grey-bg p-6 sm:p-6 sm:pb-4">
+              Content Content Content Content Content Content Content Content Content Content
+            </div>
+            <div class="bg-grey-bg  px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+              <button
+                type="button"
+                class="modalClose flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+              >
+                <p class="mx-auto">Send message</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
 </body>
 </html> 

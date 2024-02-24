@@ -42,6 +42,7 @@ export default {
         "grey-bg-alt": "#EDEDF7",
         "grey-text": "#B3B3BA",
         "grey-separator": "#E6E6F0",
+        "modal-close": "#EC6F5D",
       },
 
       boxShadow: {
