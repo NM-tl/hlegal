@@ -14,5 +14,6 @@ export default defineConfig({
                 ...inputPages,
             },
         },
+        assetsInclude: ['images/**', 'assets/**'],
     },
 });
