@@ -46,7 +46,7 @@ export default {
       },
 
       boxShadow: {
-        once: "0 5px 50px 5px rgba(36, 163, 255, 0.5)",
+        once: "0 5px 25px 5px rgba(36, 163, 255, 0.5)",
       },
 
       /* gradient colors */
