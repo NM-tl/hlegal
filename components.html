@@ -359,7 +359,6 @@
                 </div>
               </div>
             </div>
-  
             <!-- navigation -->
             <nav class="hidden md:flex">
               <ul
@@ -498,6 +497,64 @@
         </div>
     </div>
 
+     <!-- footer -->
+  <h2 class="text-hero-h1 text-white ml-5 mt-5">Footers:</h2>
+  <footer class="bg-white px-[30px] md:px-[60px]">
+    <div
+      class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+    >
+      <div>
+        <div class="flex flex-col items-center gap-[10px] md:flex-row">
+          <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+          <span class="hidden md:block text-grey-text text-xl font-bold"
+            >•</span
+          >
+          <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+        </div>
+        <div
+          class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+        >
+          <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular">
+            <path
+              d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+            />
+          </svg>
+          <script>
+            const svgElement = document.querySelector(".hoverSvg");
+          
+            svgElement.addEventListener("mouseenter", () => {
+              svgElement.style.fill = "#F0145A";
+            });
+          
+            svgElement.addEventListener("mouseleave", () => {
+              svgElement.style.fill = "";
+            });
+          </script>         
+          <span class="hidden md:block text-grey-text text-xl font-bold"
+            >•</span
+          >
+          <a href="tel:+380800211927" class="text-h4 text-main-alt">
+            0800 211 927
+          </a>
+          <span class="hidden md:block text-grey-text text-xl font-bold"
+            >•</span
+          >
+          <a
+            class="text-h4 text-active-regular hover:text-accent-color"
+            href="mailto:contact@forstudy.space"
+            >contact@forstudy.space</a
+          >
+        </div>
+      </div>
+      <div class="flex flex-col items-center mt-[10px]">
+        <p class="text-footer-font text-grey-text">
+          © 2021 HLEGAL Law company, LLC
+        </p>
+      </div>
+    </div>
+  </footer>
+
     <!-- Slider home -->
 
     <div class="mt-12 w-full">
@@ -616,5 +673,7 @@
         </div>
       </div>
   </div>
+
+ 
 </body>
 </html> 
