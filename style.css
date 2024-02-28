@@ -35,6 +35,10 @@ footer {
     height: unset;
 }
 
+.swiper-pagination {
+    z-index: 5 !important;
+}
+
 span.swiper-pagination-bullet {
     width: 16px;
     height: 16px;
