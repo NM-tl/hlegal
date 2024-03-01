@@ -15,20 +15,38 @@ footer {
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    height: 60px;
+}
+
+.swiper-slide img.team {
+    display: block;
+    height: unset;
+}
+
+.swiper-pagination {
+    z-index: 5 !important;
+}
+
+span.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: #24A3FF;
+    opacity: 0.2;
+}
+
+span.swiper-pagination-bullet-active {
+    opacity: 1;
+}

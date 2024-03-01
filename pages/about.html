@@ -6,31 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
+    <!-- swiper slider scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <script defer src="../assets/sliders/aboutSlider.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="bg-slate-800">
-    <header class="shadow-lg w-full">
-      <nav class="py-4 px-4 max-w-7xl m-auto">
-        <ul
-          class="flex w-full items-center text-white justify-between font-semibold"
-        >
-          <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/services.html">Services</a></li>
-          <li><a href="/pages/service.html">Service-singl</a></li>
-          <li><a href="/pages/publications.html">Publications</a></li>
-          <li><a href="/pages/publication.html">Publication-singl</a></li>
-          <li><a href="/pages/team.html">Team</a></li>
-          <li><a href="/pages/teammate.html">Teammate-singl</a></li>
-          <li><a href="/pages/contact.html">Contact</a></li>
-          <li><a href="/pages/contact-modal.html">Contact-modal</a></li>
-        </ul>
-      </nav>
-    </header>
     <!-- header -->
-    <section class="md:px-[60px]">
+    <header class="bg-white px-[15px] md:px-[60px] md:pt-[20px] lg:pt-[50px]">
       <!-- first mobile -->
       <div
-        class="flex justify-between items-center bg-white px-[15px] md:justify-start lg:hidden"
+        class="flex justify-between items-center py-[10px] md:justify-start md:py-[30px] lg:hidden"
       >
         <!-- language -->
         <div class="flex gap-1.5 text-grey-text font-bold">
@@ -105,14 +91,18 @@
       </div>
 
       <div
-        class="pt-12 flex md:max-w-desc-wrapper mx-auto bg-white px-4 md:px-14 md:block items-center justify-between lg:flex"
+        class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
       >
         <!-- logo -->
         <div class="flex items-start gap-1.5">
-          <img src="../images/icons/Logo.svg" alt="logo" />
+          <img
+            class="max-w-[70px] md:max-w-[130px]"
+            src="../images/icons/Logo.svg"
+            alt="logo"
+          />
           <span class="text-accent-color text-4xl font-bold">/</span>
           <h1
-            class="text-main font-normal text-[20px] leading-[24px] relative top-1"
+            class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
           >
             about us
           </h1>
@@ -120,7 +110,87 @@
 
         <div class="flex flex-col gap-4 lg:items-end">
           <!-- menu -->
-          <div class="md:hidden"><p>ico</p></div>
+          <div class="md:hidden" id="mobMenu">
+            <img src="../images/icons/menu.svg" alt="menu" />
+          </div>
+
+          <script defer>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuBtn = document.getElementById('mobMenu');
+                const menuContent = document.getElementById('mobModal');
+                const modalCloseBtn = document.querySelector('.modalClose');
+        
+                menuBtn.addEventListener('click', () => {
+                    menuContent.classList.toggle('hidden');
+                });
+        
+                modalCloseBtn.addEventListener('click', () => {
+                    menuContent.classList.add('hidden');
+                });
+            });
+        </script>        
+          <div class="relative z-10 hidden md:hidden" aria-labelledby="modal-title" role="dialog" id="mobModal">
+            <div class="fixed inset-0"></div>
+              <div class="fixed inset-0 z-50 w-screen overflow-y-auto">
+                <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0 bottom-0">
+                  <div class="transform origin-bottom overflow-hidden z-50 rounded-xl bg-white text-left shadow-xl transition-all duration-300 ease-in-out w-full max-w-[650px] pb-6 sm:my-8 absolute bottom-0" id="mobModal">
+                    <button type="button" class="modalClose absolute right-2 top-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-modal-close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>              
+                    </button>
+                    <div class="bg-white pt-10 px-3 flex flex-col">
+                      <ul
+                        class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
+                      >
+                        <li class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2">
+                          <a
+                            href="./about.html"
+                            class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                          >
+                            About us
+                          </a>
+                        </li>
+                        <li class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl">
+                          <a
+                            href="./services.html"
+                            class="w-full"
+                          >
+                            Services
+                          </a>
+                        </li>
+                        <li class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl">
+                          <a
+                            href="./team.html"
+                            class="w-full"
+                          >
+                            Team
+                          </a>
+                        </li>
+                        <li class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl">
+                          <a
+                            href="./publications.html"
+                            class="w-full"
+                          >
+                            Publications
+                          </a>
+                        </li>
+                        <li class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl">
+                          <a
+                            href="../pages/contact.html"
+                            class="w-full"
+                          >
+                            Contact
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- end mob menu -->
 
           <!-- contacts -->
           <div class="hidden md:flex items-center gap-1.5 text-base">
@@ -214,7 +284,7 @@
               <li>
                 <!-- At first it will be active by default -->
                 <a
-                  href="./pages/about.html"
+                  href="./about.html"
                   class="transition-all text-accent-color pb-0.5 border-b-2 border-accent-color"
                 >
                   About us
@@ -222,7 +292,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/services.html"
+                  href="./services.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Services
@@ -230,7 +300,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/team.html"
+                  href="./team.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Team
@@ -238,7 +308,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/publications.html"
+                  href="./publications.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Publications
@@ -246,7 +316,7 @@
               </li>
               <li>
                 <a
-                  href="./pages/contact.html"
+                  href="../pages/contact.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Contact
@@ -256,17 +326,242 @@
           </nav>
         </div>
       </div>
-    </section>
+    </header>
 
-    <h1 class="text-white text-2xl px-4 py-5">About page</h1>
-
-    <!-- Components page -->
-    <a href="../components.html">
-      <button
-        class="absolute right-5 bottom-5 text-white border border-white px-5 py-3 rounded-md"
+    <!-- main -->
+    <main class="bg-white">
+      <!-- title  -->
+      <section
+        class="p-[30px] md:p-[60px] lg:flex lg:gap-[30px] lg:justify-center"
       >
-        component
-      </button>
-    </a>
+        <div class="lg:w-[47vw] 2xl:max-w-[942px]">
+          <h1
+            class="text-h2 bg-redText text-transparent bg-clip-text mb-[28px] md:text-hero-h1"
+          >
+            We turn over the idea of legal services
+          </h1>
+          <p class="text-paragraph-about">
+            Consolidating many years of experience and practice, the company's
+            lawyers accompany complex projects and achieve the adoption of a
+            number of decisions that are important for the industry. Many people
+            form the practice of applying the law of the sea in Ukraine. <br />
+            <br />
+            HLEGAL is a reliable business partner, confirmed by stable
+            cooperation with international law firms, the trust of large
+            Ukrainian and international companies, and the recognition of
+            professional ratings.
+          </p>
+        </div>
+        <div class="flex gap-[30px] mt-[30px] lg:mt-0">
+          <img
+            class="max-h-[332px]"
+            src="../images/about/line.svg"
+            alt="line"
+          />
+          <div class="flex flex-col gap-[40px] pt-[8px]">
+            <div>
+              <div class="flex">
+                <img src="../images/about/Vector.svg" alt="flag" />
+                <p
+                  class="text-number-about bg-redText text-transparent bg-clip-text ml-[8px]"
+                >
+                  10+
+                </p>
+              </div>
+              <p class="text-link-font mt-[10px]">
+                years of relevant experience
+              </p>
+            </div>
+            <div>
+              <div class="flex">
+                <img src="../images/about/Clients.svg" alt="suitcase" />
+                <p
+                  class="text-number-about bg-redText text-transparent bg-clip-text ml-[8px]"
+                >
+                  30+
+                </p>
+              </div>
+              <p class="text-link-font mt-[10px]">
+                active clients who entrust us with their orders on a monthly
+                basis
+              </p>
+            </div>
+            <div>
+              <div class="flex">
+                <img src="../images/about/Probono.svg" alt="star" />
+                <p
+                  class="text-number-about bg-redText text-transparent bg-clip-text ml-[8px]"
+                >
+                  500+
+                </p>
+              </div>
+              <p class="text-link-font mt-[10px]">
+                hours of pro bono work annually
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- team photo -->
+      <section
+        style="background-image: url(../images/about/Team.jpg)"
+        class="m-auto bg-no-repeat bg-center bg-cover max-w-[1920px] h-[30vw] 2xl:max-h-[584px] flex justify-center items-center"
+      >
+        <p
+          class="text-white opacity-80 text-number-about tracking-[3.5vw] md:text-team-md md:tracking-[63px] lg:text-team-lg xl:text-team-xl"
+        >
+          TEAM
+        </p>
+      </section>
+
+      <!-- text -->
+      <section
+        class="p-[30px] md:p-[60px] lg:flex lg:gap-[30px] lg:justify-center"
+      >
+        <div class="lg:w-[47vw] 2xl:max-w-[942px]">
+          <p class="text-paragraph-about">
+            The historically unchanged legal profession has begun to reformat in
+            recent years. Clients are feeling this, but law firms are still
+            resisting evolution. Clients need convenience, simplicity,
+            transparent payment. Google, IBM WatsOn, Symantec Clearwell prove
+            that the technological revolution in legal services has begun and is
+            imminent. <br />
+            <br />
+            Quality is what we care about the most. <br /><br />
+            It's simple. If you are unhappy with our work, we will refund your
+            money. We trust our clients. And we want our clients to trust us
+            too.
+          </p>
+        </div>
+        <div class="mt-[30px] lg:mt-0 lg:max-w-[362px] lg:mr-[80px]">
+          <h2
+            class="text-h2 bg-redText text-transparent bg-clip-text mb-[28px] md:text-hero-h1"
+          >
+            Quality is what we care about the most.
+          </h2>
+        </div>
+      </section>
+      <section class="w-full bg-grey-bg">
+        <div class="max-w-desc-wrapper m-auto relative flex flex-col gap-8 py-8 px-4">
+          <h2 class="uppercase text-h3 text-center">achievements</h2>
+          <div class="swiper-container partners overflow-hidden">
+            <div class="swiper-wrapper mb-10"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.partners', {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            996: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1440: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+          },
+        });
+
+        const imgs = [
+            "Achievment-1", 
+            "Achievment-2", 
+            "Achievment-3", 
+            "Achievment-4"
+        ];
+
+        const achievmentsWrapper = document.querySelector(".swiper-wrapper");
+
+        if (achievmentsWrapper) {
+              for (let i = 0; i < 2; i++) {
+                  imgs.forEach((img) => {
+                    achievmentsWrapper.innerHTML += `
+                        <div class="swiper-slide py-6 px-20 rounded-xl">
+                            <img src="../../images/about/${img}.png" alt="achievement" />
+                        </div>
+                    `;
+                  });
+              }
+          }
+
+      });
+    </script>
+
+    <footer class="bg-white px-[30px] md:px-[60px]">
+      <div
+        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+      >
+        <div>
+          <div class="flex flex-col items-center gap-[10px] md:flex-row">
+            <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+          </div>
+          <div
+            class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+          >
+            <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular">
+              <path
+                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+              />
+            </svg>
+            <script>
+              const svgElement = document.querySelector(".hoverSvg");
+            
+              svgElement.addEventListener("mouseenter", () => {
+                svgElement.style.fill = "#F0145A";
+              });
+            
+              svgElement.addEventListener("mouseleave", () => {
+                svgElement.style.fill = "";
+              });
+            </script>         
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a href="tel:+380800211927" class="text-h4 text-main-alt">
+              0800 211 927
+            </a>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a
+              class="text-h4 text-active-regular hover:text-accent-color"
+              href="mailto:contact@forstudy.space"
+              >contact@forstudy.space</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-[10px]">
+          <p class="text-footer-font text-grey-text">
+            © 2021 HLEGAL Law company, LLC
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
