@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hlegal</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>contact</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
-<body class="bg-slate-800">
+<body class="bg-white">
     <header class="shadow-lg w-full">
-        <nav class="py-4 px-4 max-w-7xl m-auto">
-            <ul class="flex w-full items-center text-white justify-between font-semibold">
+        <nav class="max-w-80 m-auto">
+            <ul class="flex-1 w-full items-center text-main justify-between font-semibold">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
@@ -21,9 +31,359 @@
                 <li><a href="/pages/teammate.html">Teammate-singl</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
                 <li><a href="/pages/contact-modal.html">Contact-modal</a></li>
+                <li><a href="../components.html">Components</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="text-white text-2xl px-4 py-5">Contact page</h1>
+    <section class="md:px-[60px]">
+        <!-- first mobile -->
+        <div
+          class="flex bg-grey-bg md:bg-white justify-between items-center px-[15px] py-[13px] md:justify-start lg:hidden"
+        >
+          <!-- language -->
+          <div class="flex gap-1.5 text-grey-text font-bold">
+            <button
+              class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+            >
+              Ук
+            </button>
+            <button
+              class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+            >
+              ру
+            </button>
+            <button
+              class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+            >
+              En
+            </button>
+          </div>
+          <div class="md:flex items-center">
+            <div class="hidden md:flex md:items-center">
+              <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+              <a
+                href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+                class="text-grey-text"
+              >
+                Kyiv, Mechnikova str, 14/1
+              </a>
+              <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+            </div>
+
+            <a
+              href="tel:+380800211927"
+              class="text-grey-text font-bold mx-[7px]"
+            >
+              0800 211 927
+            </a>
+            <div class="hidden md:flex items-center">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0,0,256,256"
+                  fill="#b3b3ba"
+                  class="w-7 h-7 transition-transform hover:scale-105 hover:fill-[#F0145A] relative -top-0.5"
+                >
+                  <g
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <g transform="scale(8.53333,8.53333)">
+                      <path
+                        d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z">
+                    </path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-12 flex md:max-w-desc-wrapper mx-auto bg-white px-4 md:px-14 md:block items-center justify-between lg:flex">
+          <!-- logo -->
+          <div class="flex items-start gap-1.5">
+            <img src="../images/icons/Logo.svg" alt="logo" />
+            <span class="text-accent-color text-4xl font-bold">/</span>
+            <h1
+              class="text-main font-normal text-[20px] leading-[24px] relative top-1">
+              contact
+            </h1>
+          </div>
+
+          <div class="flex flex-col gap-4 lg:items-end">
+            <!-- menu -->
+            <div class="md:hidden">
+              <span class="material-symbols-outlined">menu</span>
+            </div>
+            <!-- contacts -->
+            <div class="hidden md:flex items-center gap-1.5 text-base">
+              <div class="hidden lg:flex lg:items-center">
+                <!-- language -->
+                <div class="flex gap-1.5 text-grey-text font-bold">
+                  <button
+                    class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg">
+                    Ук
+                  </button>
+                  <button
+                    class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg">
+                    ру
+                  </button>
+                  <button
+                    class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg">
+                    En
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <div class="flex items-center">
+                    <span class="text-grey-text text-xl font-bold mx-[7px]"
+                      >•</span>
+                    <a
+                      href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+                      class="text-grey-text">
+                      Kyiv, Mechnikova str, 14/1
+                    </a>
+                    <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+                  </div>
+                  <a
+                    href="tel:+380800211927"
+                    class="text-grey-text font-bold mx-[7px]">
+                    0800 211 927
+                  </a>
+                  <div class="flex items-center">
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="100"
+                        height="100"
+                        viewBox="0,0,256,256"
+                        fill="#b3b3ba"
+                        class="w-7 h-7 transition-transform hover:scale-105 hover:fill-[#F0145A] relative -top-0.5">
+                        <g
+                          fill-rule="nonzero"
+                          stroke="none"
+                          stroke-width="1"
+                          stroke-linecap="butt"
+                          stroke-linejoin="miter"
+                          stroke-miterlimit="10"
+                          stroke-dasharray=""
+                          stroke-dashoffset="0"
+                          font-family="none"
+                          font-weight="none"
+                          font-size="none"
+                          text-anchor="none"
+                          style="mix-blend-mode: normal">
+                          <g transform="scale(8.53333,8.53333)">
+                            <path
+                              d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- navigation -->
+            <nav class="hidden md:flex">
+              <ul
+                class="flex w-full items-center text-active-regular font-bold text-base lowercase gap-4">
+                <li>
+                  <!-- At first it will be active by default -->
+                  <a
+                    href="./about.html"
+                    class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="./services.html"
+                    class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="./team.html"
+                    class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover">
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="./publications.html"
+                    class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover">
+                    Publications
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/contact.html"
+                    class="transition-all text-accent-color pb-0.5 border-b-2 border-accent-color">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- main content -->
+      <main class="sd:w-9/12 sd:mx-auto md:flex-1 lg:flex lg:gap-14 lg:py-10 lg:max-w-lg md:mx-28 mx-auto max-w-mob-wrapper md:max-w-tab-wrapper">
+        <ul class="flex flex-col md:px-0 gap-7 px-10 py-10 lg:w-1/2">
+            <li class="border-b-4 border-grey-bg-alt pb-7 text-h3-caps text-main font-normal">Kyiv, <br>Mechnikova str, 14</li>
+            <li class="flex flex-col gap-4 border-b-4 border-grey-bg-alt pb-7"><p class="text-h3-caps text-main font-normal">0800 211 927</p><p class="text-h3-caps text-active-regular font-normal">contact@forstudy.space</p></li>
+            <li class="flex items-center gap-2 text-active-regular hover:text-accent-color hover:cursor-pointer"><a href="#"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50px"
+                height="50px"
+                viewBox="0,0,256,256"
+                fill="#24A3FF"
+                class="w-50 h-50 transition-transform hover:scale-105 hover:fill-accent-color -top-0.5"
+              >
+                <g
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"
+                    ></path>
+                  </g>
+                </g>
+              </svg></a><p class="text-paragraph-12 uppercase">Our page <br>on facebook</p></li>
+        </ul>
+        <div class="mx-9 md:mx-auto lg:w-1/2 lg:me-0 bg-grey-bg rounded-xl py-7 md:max-w-tab-wrapper">
+            <ul class="flex flex-col gap-4 px-5">
+                <li class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main">We would like to help you</li>
+                <li><div class="relative rounded-xl">
+                    <input type="text" placeholder="Name" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                        focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                        disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                        invalid:border-[#FF0000] invalid:text-[#FF0000]
+                        focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                        "/>
+                </div></li>
+                <li><div class="relative rounded-xl">
+                    <input type="text" placeholder="Message" invalid class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950
+                        focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                        disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                        invalid:border-[#FF0000] invalid:text-[#FF0000]
+                        focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                        "/>
+                </div></li>
+                <li class="text-paragraph-12 text-grey-text uppercase mt-5">How to answer you?</li>
+                <li><div class="relative rounded-xl">
+                    <input type="text" placeholder="Phone number" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                        focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                        disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                        invalid:border-[#FF0000] invalid:text-[#FF0000]
+                        focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                        "/>
+                </div></li>
+                <li><div class="relative rounded-xl">
+                    <input type="text" placeholder="Email" invalid class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                        focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                        disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                        invalid:border-[#FF0000] invalid:text-[#FF0000]
+                        focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                        "/>
+                </div></li>
+                <li><span>
+                    <button type="button" class="inline-flex items-center rounded-xl shadow-once bg-active-regular w-full h-14 mt-2 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark">
+                        <p class="mx-auto">Send message</p>
+                    </button>
+                </span></li>
+            </ul>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="bg-grey-bg px-[30px] mt-[30px] md:px-[60px]">
+        <div
+          class=" py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+        >
+          <div>
+            <div class="flex flex-col items-center gap-[10px] md:flex-row">
+              <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+              <span class="hidden md:block text-grey-text text-xl font-bold"
+                >•</span
+              >
+              <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+            </div>
+            <div
+              class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+            >
+              <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular">
+                <path
+                  d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                />
+              </svg>
+              <script>
+                const svgElement = document.querySelector(".hoverSvg");
+              
+                svgElement.addEventListener("mouseenter", () => {
+                  svgElement.style.fill = "#F0145A";
+                });
+              
+                svgElement.addEventListener("mouseleave", () => {
+                  svgElement.style.fill = "";
+                });
+              </script>         
+              <span class="hidden md:block text-grey-text text-xl font-bold"
+                >•</span
+              >
+              <a href="tel:+380800211927" class="text-h4 text-main-alt">
+                0800 211 927
+              </a>
+              <span class="hidden md:block text-grey-text text-xl font-bold"
+                >•</span
+              >
+              <a
+                class="text-h4 text-active-regular hover:text-accent-color"
+                href="mailto:contact@forstudy.space"
+                >contact@forstudy.space</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center mt-[10px]">
+            <p class="text-footer-font text-grey-text">
+              © 2021 HLEGAL Law company, LLC
+            </p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
