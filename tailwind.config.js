@@ -39,10 +39,25 @@ export default {
 
         /* grey colors */
         "grey-bg": "#F5F5FA",
+        "grey20-bg": "#F5F5FA33",
         "grey-bg-alt": "#EDEDF7",
         "grey-text": "#B3B3BA",
         "grey-separator": "#E6E6F0",
         "modal-close": "#EC6F5D",
+
+        /* company (services) */
+        hillel: "#1C4280",
+        wannabiz: "#143646",
+        tapgerine: "#F48B30",
+        "3dlook": "#9E4DC3",
+        orangear: "#FD9339",
+        adtellige: "#E2E2E4",
+        clickky: "#C71C36",
+        ecoleasing: "#DCF3F9",
+        infratek: "#EAEAEA",
+        citypark: "#282240",
+        artprint: "#1D4568",
+        ultimatecard: "#000",
       },
 
       boxShadow: {
@@ -57,7 +72,7 @@ export default {
         soft: "linear-gradient(93deg, rgba(52,50,99,1) 0%, rgba(123,66,95,1) 100%)",
         red: "linear-gradient(172deg, rgba(104,49,99,1) 0%, rgba(177,33,94,1) 100%)",
         superSoft:
-          "linear-gradient(35deg, rgba(99,61,113,1) 0%, rgba(49,49,99,1) 100%)",
+          "linear-gradient(208.37deg, rgb(50, 50, 100) 7.87%,rgb(50, 50, 100) 58.098%,rgb(100, 62, 114) 91.728%)",
         redText:
           "linear-gradient(90deg, rgba(240,19,89,1) 0%, rgba(239,128,128,1) 100%)",
       }),
@@ -201,7 +216,7 @@ export default {
     /* Wrappers */
     maxWidth: {
       "desc-wrapper": "1440px",
-      "lg": "1280px",
+      lg: "1280px",
       "tab-wrapper": "768px",
       "mob-wrapper": "375px",
       "publications-xs": "400px",
