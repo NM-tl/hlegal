@@ -68,13 +68,13 @@ export default {
 
       backgroundImage: (theme) => ({
         initial:
-          "linear-gradient(140deg, rgba(49,49,99,1) 0%, rgba(123,66,96,1) 100%)",
-        soft: "linear-gradient(93deg, rgba(52,50,99,1) 0%, rgba(123,66,95,1) 100%)",
-        red: "linear-gradient(172deg, rgba(104,49,99,1) 0%, rgba(177,33,94,1) 100%)",
+          "linear-gradient(135.00deg, rgb(50, 50, 100) 0%,rgb(50, 50, 100) 73.958%,rgb(165, 75, 95) 100%)",
+        soft: "linear-gradient(23.75deg, rgb(50, 50, 100) 9.159%,rgb(50, 50, 100) 51.115%,rgb(122, 66, 94) 92.03%)",
+        red: "linear-gradient(-49.87deg, rgb(240, 20, 90) 8.512%,rgb(105, 50, 100) 73.404%)",
         superSoft:
           "linear-gradient(208.37deg, rgb(50, 50, 100) 7.87%,rgb(50, 50, 100) 58.098%,rgb(100, 62, 114) 91.728%)",
         redText:
-          "linear-gradient(90deg, rgba(240,19,89,1) 0%, rgba(239,128,128,1) 100%)",
+          "linear-gradient(118.16deg, rgb(240, 20, 90) 10.24%,rgb(239, 128, 128) 93.344%)",
       }),
 
       fontFamily: {

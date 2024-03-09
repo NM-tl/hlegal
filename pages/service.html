@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="bg-grey-bg">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-grey-bg">
     <div class="bg-superSoft rounded-b-lg">
-    <header class="md:px-[60px] md:pt-[20px] lg:pt-[50px]">
+      <header class="md:px-[60px] md:pt-[20px] lg:pt-[50px]">
         <!-- first mobile -->
         <div
           class="px-[15px] bg-grey20-bg md:bg-transparent flex justify-between items-center py-[10px] mb-[10px] md:justify-start md:py-[30px] lg:hidden"
@@ -96,7 +96,9 @@
               src="../images/icons/Logo-dark.svg"
               alt="logo"
             />
-            <span class="text-accent-color text-4xl font-bold">/</span>
+            <span class="text-accent-color text-4xl md:text-5xl font-bold"
+              >/</span
+            >
             <h1
               class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
             >
@@ -241,240 +243,356 @@
           </div>
         </div>
       </header>
-     <!-- MAIN CONTENT -->
-      <main class="max-w-mob-wrapper md:max-w-tab-wrapper xl:max-w-xl 2xl:max-w-desc-wrapper py-7 mx-auto">
-        <div class="mx-auto flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]">
-            <img src="../images/services/serv/Ecommerce.svg" alt="e-commerce"/>
+      <!-- MAIN CONTENT -->
+      <main
+        class="max-w-mob-wrapper md:max-w-tab-wrapper xl:max-w-xl 2xl:max-w-desc-wrapper py-7 mx-auto"
+      >
+        <div
+          class="mx-auto flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+        >
+          <img src="../images/services/serv/Ecommerce.svg" alt="e-commerce" />
         </div>
         <span class="flex items-center mx-auto justify-center">
-            <h2 class="text-nowrap text-h2 font-bold bg-redText inline-block text-transparent bg-clip-text mb-7">IT and e-commerce</h2>
+          <h2
+            class="text-nowrap text-h2 font-bold bg-redText inline-block text-transparent bg-clip-text mb-7"
+          >
+            IT and e-commerce
+          </h2>
         </span>
         <span class="text-white text-paragraph-about text-center">
-            <p class="mb-7">An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.</p>
-            <p class="mb-7">In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.</p>
+          <p class="mb-7">
+            An endless stream of contracts, tax issues, labor relations,
+            corporate papers - legal work distracts you from doing business. But
+            there is not much work to do to hire an in-house lawyer.
+          </p>
+          <p class="mb-7">
+            In addition, over time, the work will become the same type and
+            uninteresting for a full-time lawyer. And we know very well how
+            difficult it is to find a good candidate with experience in the
+            field of information technology in Ukraine.
+          </p>
         </span>
 
-    <!-- free consultation btn -->
-    <div class="flex items-center mx-auto justify-center pb-7 border-b-4 border-grey20-bg">
-    <button
-        type="button"
-        class="modalBtn inline-flex items-center mx-auto justify-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark">
-        <p class="mx-auto">Free consultation</p>
-    </button>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const consultationButton = document.querySelector(".modalBtn");
-          const modal = document.querySelector(".modal");
-          const cancelButtons = document.querySelectorAll(".modalClose");
-    
-          const showModal = () => modal.classList.remove('hidden');
-          const hideModal = () => modal.classList.add('hidden');
-    
-          consultationButton.addEventListener("click", showModal);
-          modal.addEventListener("click", (event) => event.target === modal && hideModal());
-    
-          cancelButtons.forEach(button => {
-              button.addEventListener("click", hideModal);
-          });
-    
-          document.addEventListener("keydown", (event) => event.key === "Escape" && hideModal());
-        });
-      </script>
-      <div class="modal relative z-10 hidden" aria-labelledby="modal-title" role="dialog">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-          <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-              <div class="relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <button type="button" class="modalClose absolute right-4 top-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-modal-close">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>              
-                </button>
-                <div class="mx-auto bg-grey-bg rounded-xl py-7">
-                  <ul class="flex flex-col gap-4 px-5">
-                      <li class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main">We would like to help you</li>
-                      <li><div class="relative rounded-xl">
-                          <input type="text" placeholder="Name" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                              focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                              disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                              invalid:border-[#FF0000] invalid:text-[#FF0000]
-                              focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                              "/>
-                      </div></li>
-                      <li><div class="relative rounded-xl">
-                          <input type="text" placeholder="Message" invalid class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950
-                              focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                              disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                              invalid:border-[#FF0000] invalid:text-[#FF0000]
-                              focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                              "/>
-                      </div></li>
-                      <li class="text-paragraph-12 text-grey-text uppercase mt-5">How to answer you?</li>
-                      <li><div class="relative rounded-xl">
-                          <input type="text" placeholder="Phone number" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                              focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                              disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                              invalid:border-[#FF0000] invalid:text-[#FF0000]
-                              focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                              "/>
-                      </div></li>
-                      <li><div class="relative rounded-xl">
-                          <input type="text" placeholder="Email" invalid class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                              focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                              disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                              invalid:border-[#FF0000] invalid:text-[#FF0000]
-                              focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                              "/>
-                      </div></li>
-                  </ul>
-              </div>
-                <div class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+        <!-- free consultation btn -->
+        <div
+          class="flex items-center mx-auto justify-center pb-7 border-b-4 border-grey20-bg"
+        >
+          <button
+            type="button"
+            class="modalBtn inline-flex items-center mx-auto justify-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+          >
+            <p class="mx-auto">Free consultation</p>
+          </button>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const consultationButton = document.querySelector(".modalBtn");
+              const modal = document.querySelector(".modal");
+              const cancelButtons = document.querySelectorAll(".modalClose");
+
+              const showModal = () => modal.classList.remove("hidden");
+              const hideModal = () => modal.classList.add("hidden");
+
+              consultationButton.addEventListener("click", showModal);
+              modal.addEventListener(
+                "click",
+                (event) => event.target === modal && hideModal()
+              );
+
+              cancelButtons.forEach((button) => {
+                button.addEventListener("click", hideModal);
+              });
+
+              document.addEventListener(
+                "keydown",
+                (event) => event.key === "Escape" && hideModal()
+              );
+            });
+          </script>
+          <div
+            class="modal relative z-10 hidden"
+            aria-labelledby="modal-title"
+            role="dialog"
+          >
+            <div
+              class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            ></div>
+            <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+              <div
+                class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0"
+              >
+                <div
+                  class="relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+                >
                   <button
                     type="button"
-                    class="modalClose flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+                    class="modalClose absolute right-4 top-1"
                   >
-                    <p class="mx-auto">Send message</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-modal-close"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
                   </button>
+                  <div class="mx-auto bg-grey-bg rounded-xl py-7">
+                    <ul class="flex flex-col gap-4 px-5">
+                      <li
+                        class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main"
+                      >
+                        We would like to help you
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Name"
+                            invalid
+                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Message"
+                            invalid
+                            class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li
+                        class="text-paragraph-12 text-grey-text uppercase mt-5"
+                      >
+                        How to answer you?
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Phone number"
+                            invalid
+                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Email"
+                            invalid
+                            class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+                  >
+                    <button
+                      type="button"
+                      class="modalClose flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+                    >
+                      <p class="mx-auto">Send message</p>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-      </div>
+        </div>
+        <h2 class="text-h3-caps font-bold text-white mt-7 ms-7">
+          Services in this area:
+        </h2>
+        <div class="flex-1 md:flex">
+          <ul class="text-accent-color list-disc flex-1 max-w-4/5 mx-7 pt-7">
+            <li>
+              <p class="text-white mb-3">
+                support of investment projects for the development of port
+                infrastructure;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                certification of GTS, entering information about them in
+                mandatory databases and registers;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                registration of permits for the construction of port terminals;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                registration of permit and other mandatory documentation
+                required for carrying out activities in the port (emission
+                permit, conclusion on EIA, RTC, etc.);
+              </p>
+            </li>
+          </ul>
+          <ul
+            class="text-accent-color list-disc flex-1 max-w-4/5 mx-7 pb-7 mt-7"
+          >
+            <li>
+              <p class="text-white mb-3">
+                support of procedures related to the lease of state property in
+                the port;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                support of procedures related to confirmation of the status of
+                port operator, maritime agent, foreign sailing line;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                support of procedures related to the inclusion of the company
+                within the port;
+              </p>
+            </li>
+            <li>
+              <p class="text-white mb-3">
+                appeals against actions related to the illegal imposition of
+                services in the port by monopoly companies.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </main>
     </div>
-    <h2 class="text-h3-caps font-bold text-white mt-7 ms-7">Services in this area:</h2>
-    <div class="flex-1 md:flex">
-        <ul class="text-accent-color list-disc flex-1 max-w-4/5 mx-7 pt-7">
-            <li><p class="text-white mb-3">support of investment projects for the development of port infrastructure;</p></li>
-            <li><p class="text-white mb-3">certification of GTS, entering information about them in mandatory databases and registers;</p></li>
-            <li><p class="text-white mb-3">registration of permits for the construction of port terminals;</p></li>
-            <li><p class="text-white mb-3">registration of permit and other mandatory documentation required for carrying out activities in the port (emission permit, conclusion on EIA, RTC, etc.);</p></li>
-        </ul>
-        <ul class="text-accent-color list-disc flex-1 max-w-4/5 mx-7 pb-7 mt-7">
-            <li><p class="text-white mb-3">support of procedures related to the lease of state property in the port;</p></li>
-            <li><p class="text-white mb-3">support of procedures related to confirmation of the status of port operator, maritime agent, foreign sailing line;</p></li>
-            <li><p class="text-white mb-3">support of procedures related to the inclusion of the company within the port;</p></li>
-            <li><p class="text-white mb-3">appeals against actions related to the illegal imposition of services in the port by monopoly companies.</p></li>
-        </ul>
+    <div>
+      <div class="mx-[20px] h-[10px] rounded-b-lg bg-[#CACADB]"></div>
+      <div class="mx-[40px] h-[10px] rounded-b-lg bg-[#E7E7F2]"></div>
     </div>
-</main>
-</div>
-<div>
-    <div class="mx-[20px] h-[10px] rounded-b-lg bg-[#CACADB]"></div>
-    <div class="mx-[40px] h-[10px] rounded-b-lg bg-[#E7E7F2]"></div>
-</div>
-<section class="bg-grey-bg p-[30px] md:px-[60px]">
-    <div class="max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg mx-auto pt-8 flex flex-col gap-8">
+    <section class="bg-grey-bg p-[30px] md:px-[60px]">
+      <div
+        class="max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg mx-auto pt-8 flex flex-col gap-8"
+      >
         <div class="flex flex-col gap-3">
-            <a href="#" class="flex items-center gap-1 text-active-regular text-h3 uppercase w-fit transition-all hover:scale-105 hover:text-accent-color">
-                Publications
-                <span
-                    class="material-symbols-outlined mx-auto"
-                >
-                chevron_right
-                </span>
-            </a>
-            <h2 class="text-hero-h1 bg-redText text-transparent bg-clip-text">
-                Recommended
-            </h2>
+          <a
+            href="#"
+            class="flex items-center gap-1 text-active-regular text-h3 uppercase w-fit transition-all hover:scale-105 hover:text-accent-color"
+          >
+            Publications
+            <span class="material-symbols-outlined mx-auto">
+              chevron_right
+            </span>
+          </a>
+          <h2 class="text-hero-h1 bg-redText text-transparent bg-clip-text">
+            Recommended
+          </h2>
         </div>
-        <div class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-            <div class="bg-white rounded-xl">
-                <div
-                  class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-1.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-                ></div>
-                <div class="p-[30px] flex flex-col gap-[15px]">
-                  <p class="text-h4 text-active-regular hover:text-accent-color">
-                    Equity associate
-                  </p>
-                  <p class="text-paragraph-12 text-grey-text">April 22</p>
-                  <div class="border-t-[4px]"></div>
-                  <p class="text-paragraph-14">
-                    I'm a jun on projects. I am a co-owner of a law firm. How it
-                    happened. Before entering my parents told me that if I…
-                  </p>
-                </div>
-              </div>
+        <div
+          class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
+        >
+          <div class="bg-white rounded-xl">
+            <div
+              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-1.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
+            ></div>
+            <div class="p-[30px] flex flex-col gap-[15px]">
+              <p class="text-h4 text-active-regular hover:text-accent-color">
+                Equity associate
+              </p>
+              <p class="text-paragraph-12 text-grey-text">April 22</p>
+              <div class="border-t-[4px]"></div>
+              <p class="text-paragraph-14">
+                I'm a jun on projects. I am a co-owner of a law firm. How it
+                happened. Before entering my parents told me that if I…
+              </p>
+            </div>
+          </div>
 
-              <div class="bg-white rounded-xl">
-                <div
-                  class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-2.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-                ></div>
-                <div class="p-[30px] flex flex-col gap-[15px]">
-                  <p class="text-h4 text-active-regular hover:text-accent-color">
-                    Penalty for the Good Corporation: what will happen to Google and
-                    others for violating the GDPR
-                  </p>
-                  <p class="text-paragraph-12 text-grey-text">September 29</p>
-                  <div class="border-t-[4px]"></div>
-                  <p class="text-paragraph-14">
-                    And why the recovery of 50 million euros could be a fateful
-                    precedent According to Mind.ua January 21 National Commission for
-                    Data Protection.
-                  </p>
-                </div>
-              </div>
+          <div class="bg-white rounded-xl">
+            <div
+              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-2.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
+            ></div>
+            <div class="p-[30px] flex flex-col gap-[15px]">
+              <p class="text-h4 text-active-regular hover:text-accent-color">
+                Penalty for the Good Corporation: what will happen to Google and
+                others for violating the GDPR
+              </p>
+              <p class="text-paragraph-12 text-grey-text">September 29</p>
+              <div class="border-t-[4px]"></div>
+              <p class="text-paragraph-14">
+                And why the recovery of 50 million euros could be a fateful
+                precedent According to Mind.ua January 21 National Commission
+                for Data Protection.
+              </p>
+            </div>
+          </div>
 
-              <div class="bg-white rounded-xl">
-                <div
-                  class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-3.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-                ></div>
-                <div class="p-[30px] flex flex-col gap-[15px]">
-                  <p class="text-h4 text-active-regular hover:text-accent-color">
-                    Millennial Testament
-                  </p>
-                  <p class="text-paragraph-12 text-grey-text">August 19</p>
-                  <div class="border-t-[4px]"></div>
-                  <p class="text-paragraph-14">
-                    What and how modern vloggers, opinion leaders and
-                    crypto-millionaires will inherit A typical legacy of the Ukrainian
-                    generation X looks like this: an apartment in…
-                  </p>
-                </div>
-              </div>
+          <div class="bg-white rounded-xl">
+            <div
+              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-3.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
+            ></div>
+            <div class="p-[30px] flex flex-col gap-[15px]">
+              <p class="text-h4 text-active-regular hover:text-accent-color">
+                Millennial Testament
+              </p>
+              <p class="text-paragraph-12 text-grey-text">August 19</p>
+              <div class="border-t-[4px]"></div>
+              <p class="text-paragraph-14">
+                What and how modern vloggers, opinion leaders and
+                crypto-millionaires will inherit A typical legacy of the
+                Ukrainian generation X looks like this: an apartment in…
+              </p>
+            </div>
+          </div>
         </div>
-    </div>        
-</section>
+      </div>
+    </section>
 
     <!-- footer  -->
     <footer class="bg-grey-bg px-[30px] md:px-[60px]">
-        <div
-            class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
-        >
-            <div>
-            <div class="flex flex-col items-center gap-[10px] md:flex-row">
-                <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
-                <span class="hidden md:block text-grey-text text-xl font-bold"
-                >•</span
-                >
-                <p class="text-paragraph-12 text-active-regular">ON MAP</p>
-            </div>
-            <div
-                class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+      <div
+        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+      >
+        <div>
+          <div class="flex flex-col items-center gap-[10px] md:flex-row">
+            <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
             >
-                <img src="../images/footer/facebook.svg" alt="facebook" />
-                <span class="hidden md:block text-grey-text text-xl font-bold"
-                >•</span
-                >
-                <a href="tel:+380800211927" class="text-h4 text-main-alt">
-                0800 211 927
-                </a>
-                <span class="hidden md:block text-grey-text text-xl font-bold"
-                >•</span
-                >
-                <a
-                class="text-h4 text-active-regular hover:text-accent-color"
-                href="mailto:contact@forstudy.space"
-                >contact@forstudy.space</a
-                >
-            </div>
-            </div>
-            <div class="flex flex-col items-center mt-[10px]">
-            <p class="text-footer-font text-grey-text">
-                © 2021 HLEGAL Law company, LLC
-            </p>
-            </div>
+            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+          </div>
+          <div
+            class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+          >
+            <img src="../images/footer/facebook.svg" alt="facebook" />
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a href="tel:+380800211927" class="text-h4 text-main-alt">
+              0800 211 927
+            </a>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a
+              class="text-h4 text-active-regular hover:text-accent-color"
+              href="mailto:contact@forstudy.space"
+              >contact@forstudy.space</a
+            >
+          </div>
         </div>
-        </footer>
-
-</body>
+        <div class="flex flex-col items-center mt-[10px]">
+          <p class="text-footer-font text-grey-text">
+            © 2021 HLEGAL Law company, LLC
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
