@@ -44,17 +44,24 @@
           </div>
           <div class="md:flex items-center">
             <div class="hidden md:flex md:items-center">
-              <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+              <span class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
+                >•</span
+              >
               <a
                 href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
                 class="text-grey-text"
               >
                 Kyiv, Mechnikova str, 14/1
               </a>
-              <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+              <span class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
+                >•</span
+              >
             </div>
-  
-            <a href="tel:+380800211927" class="text-grey-text font-bold mx-[7px]">
+
+            <a
+              href="tel:+380800211927"
+              class="text-grey-text font-bold mx-[7px]"
+            >
               0800 211 927
             </a>
             <div class="hidden md:flex items-center">
@@ -95,7 +102,7 @@
             </div>
           </div>
         </div>
-  
+
         <div
           class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
         >
@@ -115,26 +122,27 @@
               about us
             </h1>
           </div>
-  
+
           <div class="flex flex-col gap-4 lg:items-end">
             <!-- mob menu -->
-            <div class="md:hidden flex items-center py-2 px-2 rounded-lg" id="mobMenu">
-              <span class="material-symbols-outlined text-main">
-                menu
-                </span>
+            <div
+              class="md:hidden flex items-center py-2 px-2 rounded-lg"
+              id="mobMenu"
+            >
+              <span class="material-symbols-outlined text-main"> menu </span>
             </div>
-  
+
             <script defer>
               document.addEventListener("DOMContentLoaded", () => {
                 const menuBtn = document.getElementById("mobMenu");
                 const menuContent = document.getElementById("mobModal");
                 const modalCloseBtn = document.querySelector(".modalClose");
-  
+
                 menuBtn.addEventListener("click", () => {
                   menuContent.classList.toggle("hidden");
                   menuBtn.classList.toggle("bg-grey-separator");
                 });
-  
+
                 modalCloseBtn.addEventListener("click", () => {
                   menuContent.classList.add("hidden");
                   menuBtn.classList.remove("bg-grey-separator");
@@ -182,19 +190,24 @@
                         <li
                           class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
                         >
+                          <a href="./about.html" class="w-full"> About us </a>
+                        </li>
+                        <li
+                          class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                        >
+                          <a href="./services.html" class="w-full">
+                            Services
+                          </a>
+                        </li>
+                        <li
+                          class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                        >
                           <a
-                            href="./about.html" class="w-full" > About us </a>
-                        </li>
-                        <li
-                          class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                        >
-                          <a href="./services.html" class="w-full"> Services </a>
-                        </li>
-                        <li
-                          class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                        >
-                          <a href="./team.html" 
-                          class="transition-all text-accent-color border-accent-color w-full text-2xl"> Team </a>
+                            href="./team.html"
+                            class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                          >
+                            Team
+                          </a>
                         </li>
                         <li
                           class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
@@ -217,7 +230,7 @@
               </div>
             </div>
             <!-- end mob menu -->
-  
+
             <!-- contacts -->
             <div class="hidden md:flex items-center gap-1.5 text-base">
               <div class="hidden lg:flex lg:items-center">
@@ -239,10 +252,11 @@
                     En
                   </button>
                 </div>
-  
+
                 <div class="flex items-center">
                   <div class="flex items-center">
-                    <span class="text-grey-text text-xl font-bold mx-[7px]"
+                    <span
+                      class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
                       >•</span
                     >
                     <a
@@ -251,11 +265,12 @@
                     >
                       Kyiv, Mechnikova str, 14/1
                     </a>
-                    <span class="text-grey-text text-xl font-bold mx-[7px]"
+                    <span
+                      class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
                       >•</span
                     >
                   </div>
-  
+
                   <a
                     href="tel:+380800211927"
                     class="text-grey-text font-bold mx-[7px]"
@@ -301,7 +316,7 @@
                 </div>
               </div>
             </div>
-  
+
             <!-- navigation -->
             <nav class="hidden md:flex">
               <ul
