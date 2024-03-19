@@ -1,34 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="bg-slate-800">
-    <header class="shadow-lg w-full">
-        <nav class="py-4 px-4 max-w-7xl m-auto">
-            <ul class="flex w-full items-center text-white justify-between font-semibold">
-                <li><a href="/">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/service.html">Service-singl</a></li>
-                <li><a href="/pages/publications.html">Publications</a></li>
-                <li><a href="/pages/publication.html">Publication-singl</a></li>
-                <li><a href="/pages/team.html">Team</a></li>
-                <li><a href="/pages/teammate.html">Teammate-singl</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-                <li><a href="/pages/contact-modal.html">Contact-modal</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1 class="text-white text-2xl px-4 py-5">Services page</h1>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="">
+    <!-- header -->
+    <header class="md:px-[60px] md:pt-[20px] lg:pt-[50px] bg-[#323264]">
+      <!-- first mobile -->
+      <div
+        class="px-[15px] bg-grey20-bg md:bg-transparent flex justify-between items-center py-[10px] mb-[10px] md:justify-start md:py-[30px] lg:hidden"
+      >
+        <!-- language -->
+        <div class="md:mx-0 flex gap-1.5 text-white font-bold">
+          <button
+            class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+          >
+            Ук
+          </button>
+          <button
+            class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+          >
+            ру
+          </button>
+          <button
+            class="uppercase transition-all hover:bg-accent-color hover:text-[#fff] hover:scale-105 py-1 px-2 rounded-lg"
+          >
+            En
+          </button>
+        </div>
+        <div class="md:mx-0 md:flex items-center">
+          <div class="hidden md:flex md:items-center">
+            <span class="text-white text-xl font-bold mx-[7px]">•</span>
+            <a
+              href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+              class="text-white"
+            >
+              Kyiv, Mechnikova str, 14/1
+            </a>
+            <span class="text-white text-xl font-bold mx-[7px]">•</span>
+          </div>
 
-    <!-- Components page -->
-    <a href="../components.html">
-        <button class="absolute right-5 bottom-5 text-white border border-white px-5 py-3 rounded-md">component</button>
-    </a>
-</body>
+          <a href="tel:+380800211927" class="text-white font-bold mx-[7px]">
+            0800 211 927
+          </a>
+          <div class="hidden md:flex items-center">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0,0,256,256"
+                fill="#b3b3ba"
+                class="w-7 h-7 transition-transform hover:scale-105 hover:fill-[#F0145A] relative -top-0.5"
+              >
+                <g
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mx-[15px] flex md:max-w-[1600px] md:mx-auto md:block items-center justify-between lg:flex"
+      >
+        <!-- logo -->
+        <div class="flex gap-1.5">
+          <img
+            class="max-w-[70px] md:max-w-[130px]"
+            src="../images/icons/Logo-dark.svg"
+            alt="logo"
+          />
+          <span class="text-accent-color text-4xl md:text-5xl font-bold"
+            >/</span
+          >
+          <h1
+            class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
+          >
+            services
+          </h1>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:items-end">
+          <!-- menu -->
+          <!-- mob menu -->
+          <div
+            class="md:hidden flex items-center py-2 px-2 rounded-lg text-white"
+            id="mobMenu"
+          >
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+
+          <script defer>
+            document.addEventListener("DOMContentLoaded", () => {
+              const menuBtn = document.getElementById("mobMenu");
+              const menuContent = document.getElementById("mobModal");
+              const modalContent = document.querySelector(".modalContent")
+              const modalCloseBtn = document.querySelector(".modalClose");
+
+              menuBtn.addEventListener("click", () => {
+                  menuContent.classList.toggle("hidden");
+                  menuBtn.classList.toggle("bg-grey-separator");
+                  modalContent.classList.remove('fade-out-bottom');
+                  modalContent.classList.add('fade-in-bottom');
+              });
+
+              if (modalCloseBtn) {
+                modalCloseBtn.addEventListener("click", () => {
+                    modalContent.classList.remove('fade-in-bottom');
+                    modalContent.classList.add('fade-out-bottom');
+                    setTimeout(() => {
+                        menuContent.classList.add("hidden");
+                        menuBtn.classList.remove("bg-grey-separator");
+                    }, 300);
+                });
+              }
+            });
+          </script>
+          <div
+            class="relative z-10 hidden md:hidden"
+            aria-labelledby="modal-title"
+            role="dialog"
+            id="mobModal"
+          >
+            <div class="fixed inset-0"></div>
+            <div class="fixed inset-0 z-50 w-screen overflow-y-auto">
+              <div
+                class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0 bottom-0"
+              >
+                <div
+                  class="transform origin-bottom overflow-hidden z-50 rounded-xl bg-white text-left shadow-xl transition-all duration-300 ease-in-out w-full max-w-[650px] pb-6 sm:my-8 absolute bottom-0"
+                  id="mobModal"
+                >
+                  <button
+                    type="button"
+                    class="modalClose absolute right-2 top-2 z-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-8 h-8 text-modal-close"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                  <div class="modalContent bg-white pt-10 px-3 flex flex-col">
+                    <ul
+                      class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
+                    >
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./about.html" class="w-full"> About us </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a
+                          href="./services.html"
+                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                        >
+                          Services
+                        </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./team.html" class="w-full"> Team </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./publications.html" class="w-full">
+                          Publications
+                        </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="../pages/contact.html" class="w-full">
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end mob menu -->
+
+          <!-- contacts -->
+          <div class="hidden md:flex items-center gap-1.5 text-base">
+            <div class="hidden lg:flex lg:items-center">
+              <!-- language -->
+              <div class="flex gap-1.5 text-grey-text font-bold">
+                <button
+                  class="text-white uppercase transition-all hover:bg-accent-color hover:scale-105 py-1 px-2 rounded-lg"
+                >
+                  Ук
+                </button>
+                <button
+                  class="text-white uppercase transition-all hover:bg-accent-color hover:scale-105 py-1 px-2 rounded-lg"
+                >
+                  ру
+                </button>
+                <button
+                  class="text-white uppercase transition-all hover:bg-accent-color hover:scale-105 py-1 px-2 rounded-lg"
+                >
+                  En
+                </button>
+              </div>
+
+              <div class="flex items-center">
+                <div class="flex items-center">
+                  <span class="text-white text-xl font-bold mx-[7px]">•</span>
+                  <a
+                    href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+                    class="text-white"
+                  >
+                    Kyiv, Mechnikova str, 14/1
+                  </a>
+                  <span class="text-white text-xl font-bold mx-[7px]">•</span>
+                </div>
+
+                <a
+                  href="tel:+380800211927"
+                  class="text-white font-bold mx-[7px]"
+                >
+                  0800 211 927
+                </a>
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="100"
+                      height="100"
+                      viewBox="0,0,256,256"
+                      fill="#b3b3ba"
+                      class="w-7 h-7 transition-transform hover:scale-105 hover:fill-[#F0145A] relative -top-0.5"
+                    >
+                      <g
+                        fill-rule="nonzero"
+                        stroke="none"
+                        stroke-width="1"
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        stroke-miterlimit="10"
+                        stroke-dasharray=""
+                        stroke-dashoffset="0"
+                        font-family="none"
+                        font-weight="none"
+                        font-size="none"
+                        text-anchor="none"
+                        style="mix-blend-mode: normal"
+                      >
+                        <g transform="scale(8.53333,8.53333)">
+                          <path
+                            d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- navigation -->
+          <nav class="hidden md:flex">
+            <ul
+              class="flex w-full items-center text-active-regular font-bold text-base lowercase gap-4"
+            >
+              <li>
+                <!-- At first it will be active by default -->
+                <a
+                  href="./about.html"
+                  class="text-white transition-all hover:text-white pb-0.5 hover:border-b-2 hover:border-white"
+                >
+                  About us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./services.html"
+                  class="transition-all text-accent-color pb-0.5 border-b-2 border-accent-color"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./team.html"
+                  class="text-white transition-all hover:text-white pb-0.5 hover:border-b-2 hover:border-white"
+                >
+                  Team
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./publications.html"
+                  class="text-white transition-all hover:text-white pb-0.5 hover:border-b-2 hover:border-white"
+                >
+                  Publications
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="text-white transition-all hover:text-white pb-0.5 hover:border-b-2 hover:border-white"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-[1920px] m-auto bg-superSoft rounded-b-lg pt-[1px]">
+      <h2
+        class="text-hero-h1 bg-redText text-transparent bg-clip-text m-[30px] mb-0 md:m-[60px] md:mb-0"
+      >
+        What can we do better than others?
+      </h2>
+      <!-- services -->
+      <section
+        class="p-[30px] md:p-[60px] grid grid-cols-1 gap-[30px] md:grid-cols-2 md:gap-[60px] lg:grid-cols-3"
+      >
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img src="../images/services/serv/Ecommerce.svg" alt="e-commerce" />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            <a href="/pages/service.html"> IT and e-commerce </a>
+          </p>
+          <p class="text-paragraph-font text-white">
+            An endless stream of contracts, tax issues, labor relations,
+            corporate papers - legal work distracts you from doing business. But
+            there is not much work to do to hire an in-house lawyer.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img src="../images/services/serv/Support.svg" alt="support" />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            Comprehensive daily legal support
+          </p>
+          <p class="text-paragraph-font text-white">
+            In addition, over time, the work will become the same type and
+            uninteresting for a full-time lawyer. And we know very well how
+            difficult it is to find a good candidate with experience in the
+            field of information technology in Ukraine.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img src="../images/services/serv/Coprorate.svg" alt="corporate" />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            Structuring corporate relationships
+          </p>
+          <p class="text-paragraph-font text-white">
+            Instead of just providing legal services, we will hire a lawyer or a
+            whole team that will fit into the daily life of your company.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img src="../images/services/serv/Trust.svg" alt="Trust" />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            Building contractual relations
+          </p>
+          <p class="text-paragraph-font text-white">
+            Once a week, or week after month, you have your own lawyer by your
+            side. Anyone in the company can catch it at the coffee maker and
+            just talk about current affairs instead of waiting for update
+            status.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img
+              src="../images/services/serv/Protection.svg"
+              alt="Protection"
+            />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            Protection of business, intellectual property
+          </p>
+          <p class="text-paragraph-font text-white">
+            And all the other time he will work on new diverse projects, so he
+            will definitely not stop in professional development. One way or
+            another, all Axon Partners will work for you instead of a corporate
+            lawyer.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div
+            class="flex justify-center items-center w-[92px] h-[92px] bg-white rounded-[24px] mb-[15px]"
+          >
+            <img src="../images/services/serv/Court.svg" alt="Court" />
+          </div>
+          <p class="text-h3-caps text-active-regular hover:text-accent-color">
+            Judicial representation
+          </p>
+          <p class="text-paragraph-font text-white">
+            Is it a small, medium-sized company or a market leader? Local
+            business or multinational company? Do you have your own legal
+            department or not?
+          </p>
+        </div>
+      </section>
+    </main>
+    <div>
+      <div class="mx-[20px] h-[10px] rounded-b-lg bg-[#CACADB]"></div>
+      <div class="mx-[40px] h-[10px] rounded-b-lg bg-[#E7E7F2]"></div>
+    </div>
+
+    <h2 class="text-h3 text-main max-w-[210px] m-auto mb-[30px] mt-[60px]">
+      They already trust us
+    </h2>
+    <!-- company -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="h-[120px] bg-hillel flex justify-center items-center">
+        <img src="../images/services/clients/hillel.svg" alt="hillel" />
+      </div>
+      <div class="h-[120px] bg-wannabiz flex justify-center items-center">
+        <img src="../images/services/clients/wannabiz.svg" alt="wannabiz" />
+      </div>
+      <div class="h-[120px] bg-tapgerine flex justify-center items-center">
+        <img src="../images/services/clients/tapgerine.svg" alt="tapgerine" />
+      </div>
+      <div class="h-[120px] bg-3dlook flex justify-center items-center">
+        <img src="../images/services/clients/3dlook.svg" alt="3dlook" />
+      </div>
+      <div class="h-[120px] bg-orangear flex justify-center items-center">
+        <img src="../images/services/clients/orangear.svg" alt="orangear" />
+      </div>
+      <div class="h-[120px] bg-adtellige flex justify-center items-center">
+        <img
+          src="../images/services/clients/adtelligent.svg"
+          alt="adtelligent"
+        />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-clickky justify-center items-center"
+      >
+        <img src="../images/services/clients/clickky.svg" alt="clickky" />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-ecoleasing justify-center items-center"
+      >
+        <img
+          src="../images/services/clients/eco-leasing.svg"
+          alt="eco-leasing"
+        />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-infratek justify-center items-center"
+      >
+        <img src="../images/services/clients/ingratek.svg" alt="infratek" />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-citypark justify-center items-center"
+      >
+        <img src="../images/services/clients/city-par.svg" alt="city-park" />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-artprint justify-center items-center"
+      >
+        <img src="../images/services/clients/artprint.svg" alt="artprint" />
+      </div>
+      <div
+        class="hidden md:flex h-[120px] bg-ultimatecard justify-center items-center"
+      >
+        <img
+          src="../images/services/clients/ultimatecard.svg"
+          alt="ultimatecard"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-white px-[30px] md:px-[60px]">
+      <div
+        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+      >
+        <div>
+          <div class="flex flex-col items-center gap-[10px] md:flex-row">
+            <p class="text-footer-font">Kyiv, Mechnikova str., 14/1</p>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+          </div>
+          <div
+            class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
+          >
+            <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular"
+            >
+              <path
+                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+              />
+            </svg>
+            <script>
+              const svgElement = document.querySelector(".hoverSvg");
+
+              svgElement.addEventListener("mouseenter", () => {
+                svgElement.style.fill = "#F0145A";
+              });
+
+              svgElement.addEventListener("mouseleave", () => {
+                svgElement.style.fill = "";
+              });
+            </script>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a href="tel:+380800211927" class="text-h4 text-main-alt">
+              0800 211 927
+            </a>
+            <span class="hidden md:block text-grey-text text-xl font-bold"
+              >•</span
+            >
+            <a
+              class="text-h4 text-active-regular hover:text-accent-color"
+              href="mailto:contact@forstudy.space"
+              >contact@forstudy.space</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-[10px]">
+          <p class="text-footer-font text-grey-text">
+            © 2021 HLEGAL Law company, LLC
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
