@@ -120,21 +120,26 @@
             document.addEventListener("DOMContentLoaded", () => {
               const menuBtn = document.getElementById("mobMenu");
               const menuContent = document.getElementById("mobModal");
+              const modalContent = document.querySelector(".modalContent")
               const modalCloseBtn = document.querySelector(".modalClose");
 
               menuBtn.addEventListener("click", () => {
-                menuContent.classList.toggle("hidden");
-                menuBtn.classList.toggle("bg-grey-separator");
-                menuBtn.classList.remove("text-white");
-                menuBtn.classList.add("text-main");
+                  menuContent.classList.toggle("hidden");
+                  menuBtn.classList.toggle("bg-grey-separator");
+                  modalContent.classList.remove('fade-out-bottom');
+                  modalContent.classList.add('fade-in-bottom');
               });
 
-              modalCloseBtn.addEventListener("click", () => {
-                menuContent.classList.add("hidden");
-                menuBtn.classList.remove("bg-grey-separator");
-                menuBtn.classList.remove("text-main");
-                menuBtn.classList.add("text-white");
-              });
+              if (modalCloseBtn) {
+                modalCloseBtn.addEventListener("click", () => {
+                    modalContent.classList.remove('fade-in-bottom');
+                    modalContent.classList.add('fade-out-bottom');
+                    setTimeout(() => {
+                        menuContent.classList.add("hidden");
+                        menuBtn.classList.remove("bg-grey-separator");
+                    }, 300);
+                });
+              }
             });
           </script>
           <div
@@ -154,7 +159,7 @@
                 >
                   <button
                     type="button"
-                    class="modalClose absolute right-2 top-2"
+                    class="modalClose absolute right-2 top-2 z-50"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +176,7 @@
                       />
                     </svg>
                   </button>
-                  <div class="bg-white pt-10 px-3 flex flex-col">
+                  <div class="modalContent bg-white pt-10 px-3 flex flex-col">
                     <ul
                       class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
                     >
