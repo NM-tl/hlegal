@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
-    <script defer src="../assets/js/mobMenu.js"></script>
-    <script defer src="../assets/js/sliderAbout.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/mobMenu.js"></script>
+    <script defer src="../assets/js/fbHover.js"></script>
+    <script defer src="../assets/js/sliderAbout.js"></script>
   </head>
   <body class="bg-slate-800">
     <!-- header -->
@@ -520,17 +521,6 @@
                 d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
               />
             </svg>
-            <script>
-              const svgElement = document.querySelector(".hoverSvg");
-
-              svgElement.addEventListener("mouseenter", () => {
-                svgElement.style.fill = "#F0145A";
-              });
-
-              svgElement.addEventListener("mouseleave", () => {
-                svgElement.style.fill = "";
-              });
-            </script>
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >

@@ -12,6 +12,8 @@
     />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
+    <script defer src="../assets/js/mobMenu.js"></script>
+    <script defer src="../assets/js/fbHover.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -124,33 +126,6 @@
           >
             <span class="material-symbols-outlined text-main"> menu </span>
           </div>
-
-          <script defer>
-            document.addEventListener("DOMContentLoaded", () => {
-              const menuBtn = document.getElementById("mobMenu");
-              const menuContent = document.getElementById("mobModal");
-              const modalContent = document.querySelector(".modalContent")
-              const modalCloseBtn = document.querySelector(".modalClose");
-
-              menuBtn.addEventListener("click", () => {
-                  menuContent.classList.toggle("hidden");
-                  menuBtn.classList.toggle("bg-grey-separator");
-                  modalContent.classList.remove('fade-out-bottom');
-                  modalContent.classList.add('fade-in-bottom');
-              });
-
-              if (modalCloseBtn) {
-                modalCloseBtn.addEventListener("click", () => {
-                    modalContent.classList.remove('fade-in-bottom');
-                    modalContent.classList.add('fade-out-bottom');
-                    setTimeout(() => {
-                        menuContent.classList.add("hidden");
-                        menuBtn.classList.remove("bg-grey-separator");
-                    }, 300);
-                });
-              }
-            });
-          </script>
           <div
             class="relative z-10 hidden md:hidden"
             aria-labelledby="modal-title"
@@ -573,10 +548,10 @@
         </div>
       </section>
     </main>
-    <!-- footer  -->
-    <footer class="bg-grey-bg px-[30px] md:px-[60px]">
+    <!-- FOOTER -->
+    <footer class="bg-grey-bg px-[30px] pt-[30px] md:px-[60px]">
       <div
-        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+        class="py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
       >
         <div>
           <div class="flex flex-col items-center gap-[10px] md:flex-row">
@@ -589,7 +564,18 @@
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
           >
-            <img src="../images/footer/facebook.svg" alt="facebook" />
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular"
+            >
+              <path
+                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+              />
+            </svg>
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >
@@ -613,14 +599,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Components page -->
-    <a href="../components.html">
-      <button
-        class="absolute right-5 bottom-5 text-white border border-white px-5 py-3 rounded-md"
-      >
-        component
-      </button>
-    </a>
   </body>
 </html>
