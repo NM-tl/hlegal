@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import fs from 'fs';
 
 const pages = ['about', 'contact-modal', 'contact', 'publication', 'publications', 'service', 'services', 'team', 'teammate'];
 
@@ -13,8 +12,8 @@ export default defineConfig({
                 main: './index.html',
                 components: './components.html',
                 ...inputPages,
-                'assets/js/mobMenu': './assets/js/mobMenu.js',
-                'assets/js/sliderAbout': './assets/js/sliderAbout.js'
+                'js/mobMenu': './assets/js/mobMenu.js',
+                'js/sliderAbout': './assets/js/sliderAbout.js'
             },
         },
         assetsInclude: ['images/**', 'assets/**'],
