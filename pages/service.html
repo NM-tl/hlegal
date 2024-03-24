@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body class="bg-grey-bg">
     <!-- header -->
@@ -107,13 +111,8 @@
         </div>
 
         <div class="flex flex-col gap-4 lg:items-end">
-          <!-- menu -->
-          <!-- mob menu -->
-          <div
-            class="md:hidden flex items-center py-2 px-2 rounded-lg text-white"
-            id="mobMenu"
-          >
-            <span class="material-symbols-outlined"> menu </span>
+          <div class="md:hidden flex items-center py-2 px-2 rounded-lg" id="mobMenu">
+            <span class="material-symbols-outlined text-white"> menu </span>
           </div>
 
           <script defer>
@@ -388,131 +387,106 @@
         <div
           class="flex items-center mx-auto justify-center pb-7 border-b-4 border-grey20-bg"
         >
-          <button
-            type="button"
-            class="modalBtn inline-flex items-center mx-auto justify-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
-          >
-            <p class="mx-auto">Free consultation</p>
-          </button>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const consultationButton = document.querySelector(".modalBtn");
-              const modal = document.querySelector(".modal");
-              const cancelButtons = document.querySelectorAll(".modalClose");
-
-              const showModal = () => modal.classList.remove("hidden");
-              const hideModal = () => modal.classList.add("hidden");
-
-              consultationButton.addEventListener("click", showModal);
-              modal.addEventListener(
-                "click",
-                (event) => event.target === modal && hideModal()
-              );
-
-              cancelButtons.forEach((button) => {
-                button.addEventListener("click", hideModal);
-              });
-
-              document.addEventListener(
-                "keydown",
-                (event) => event.key === "Escape" && hideModal()
-              );
+        <button
+          type="button"
+          class="modalBtn inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+        >
+          <p class="mx-auto">Free consultation</p>
+        </button>
+      
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const consultationButton = document.querySelector(".modalBtn");
+            const modalCTA = document.querySelector(".modalCTA");
+            const modalForm = document.querySelector(".modalForm");
+            const closeButtons = document.querySelectorAll(".modalCloseForm");
+      
+            const showModal = () => {
+                modalCTA.classList.remove('hidden');
+                if (modalForm.classList.contains('fade-out-bottom')) {
+                    modalForm.classList.remove('fade-out-bottom');
+                    modalForm.classList.add('fade-in-bottom');
+                } else {
+                    modalForm.classList.toggle('fade-in-bottom');
+                }
+            };
+      
+            const hideModal = () => {
+                modalForm.classList.toggle('fade-in-bottom');
+                modalForm.classList.toggle('fade-out-bottom');
+                setTimeout(() => {
+                    modalCTA.classList.toggle('hidden');
+                }, 300);
+            };
+      
+            consultationButton.addEventListener("click", showModal);
+            modalCTA.addEventListener("click", (event) => {
+              if (!modalForm.contains(event.target)) {
+                  hideModal();
+              }
             });
-          </script>
-          <div
-            class="modal relative z-10 hidden"
-            aria-labelledby="modal-title"
-            role="dialog"
-          >
-            <div
-              class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-            ></div>
+      
+            modalCTA.addEventListener("click", (event) => event.target === modal && hideModal());
+      
+            closeButtons.forEach(button => {
+                button.addEventListener("click", hideModal);
+            });
+      
+            document.addEventListener("keydown", (event) => event.key === "Escape" && hideModal());
+          });
+        </script>
+        <div class="modalCTA relative z-10 hidden" aria-labelledby="modal-title" role="dialog">
+          <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-              <div
-                class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0"
-              >
-                <div
-                  class="relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
-                >
-                  <button
-                    type="button"
-                    class="modalClose absolute right-4 top-1"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 text-modal-close"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 18 18 6M6 6l12 12"
-                      />
-                    </svg>
+              <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="modalForm relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:w-[650px]">
+                  <button type="button" class="modalCloseForm absolute rounded-lg right-5 top-5 transition-all hover:scale-105 hover:bg-grey-separator">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-modal-close">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>              
                   </button>
                   <div class="mx-auto bg-grey-bg rounded-xl py-7">
                     <ul class="flex flex-col gap-4 px-5">
-                      <li
-                        class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main"
-                      >
-                        We would like to help you
-                      </li>
-                      <li>
-                        <div class="relative rounded-xl">
-                          <input
-                            type="text"
-                            placeholder="Name"
-                            invalid
-                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <div class="relative rounded-xl">
-                          <input
-                            type="text"
-                            placeholder="Message"
-                            invalid
-                            class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
-                          />
-                        </div>
-                      </li>
-                      <li
-                        class="text-paragraph-12 text-grey-text uppercase mt-5"
-                      >
-                        How to answer you?
-                      </li>
-                      <li>
-                        <div class="relative rounded-xl">
-                          <input
-                            type="text"
-                            placeholder="Phone number"
-                            invalid
-                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
-                          />
-                        </div>
-                      </li>
-                      <li>
-                        <div class="relative rounded-xl">
-                          <input
-                            type="text"
-                            placeholder="Email"
-                            invalid
-                            class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
-                          />
-                        </div>
-                      </li>
+                        <li class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main">We would like to help you</li>
+                        <li><div class="relative rounded-xl">
+                            <input type="text" placeholder="Name" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                                invalid:border-[#FF0000] invalid:text-[#FF0000]
+                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                                "/>
+                        </div></li>
+                        <li><div class="relative rounded-xl">
+                            <input type="text" placeholder="Message" invalid class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950
+                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                                invalid:border-[#FF0000] invalid:text-[#FF0000]
+                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                                "/>
+                        </div></li>
+                        <li class="text-paragraph-12 text-grey-text uppercase mt-5">How to answer you?</li>
+                        <li><div class="relative rounded-xl">
+                            <input type="text" placeholder="Phone number" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                                invalid:border-[#FF0000] invalid:text-[#FF0000]
+                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                                "/>
+                        </div></li>
+                        <li><div class="relative rounded-xl">
+                            <input type="text" placeholder="Email" invalid class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
+                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
+                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
+                                invalid:border-[#FF0000] invalid:text-[#FF0000]
+                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
+                                "/>
+                        </div></li>
                     </ul>
-                  </div>
-                  <div
-                    class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
-                  >
+                </div>
+                  <div class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                     <button
                       type="button"
-                      class="modalClose flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+                      class="modalCloseForm flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
                     >
                       <p class="mx-auto">Send message</p>
                     </button>
@@ -520,7 +494,7 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
         </div>
         <h2 class="text-h3-caps font-bold text-white mt-7 ms-7">
           Services in this area:
@@ -609,9 +583,7 @@
           class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
         >
           <div class="bg-white rounded-xl">
-            <div
-              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-1.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-            ></div>
+            <img src="../images/publications/Publication-1.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
             <div class="p-[30px] flex flex-col gap-[15px]">
               <p class="text-h4 text-active-regular hover:text-accent-color">
                 Equity associate
@@ -626,9 +598,7 @@
           </div>
 
           <div class="bg-white rounded-xl">
-            <div
-              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-2.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-            ></div>
+            <img src="../images/publications/Publication-2.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
             <div class="p-[30px] flex flex-col gap-[15px]">
               <p class="text-h4 text-active-regular hover:text-accent-color">
                 Penalty for the Good Corporation: what will happen to Google and
@@ -645,9 +615,7 @@
           </div>
 
           <div class="bg-white rounded-xl">
-            <div
-              class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-3.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-            ></div>
+            <img src="../images/publications/Publication-3.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
             <div class="p-[30px] flex flex-col gap-[15px]">
               <p class="text-h4 text-active-regular hover:text-accent-color">
                 Millennial Testament
