@@ -521,30 +521,43 @@
                 },
               });
       
-              const imgs = [
-                "Achievment-1",
-                "Achievment-2",
-                "Achievment-3",
-                "Achievment-4",
-              ];
+              // const imgs = [
+              //   "Achievment-1",
+              //   "Achievment-2",
+              //   "Achievment-3",
+              //   "Achievment-4",
+              // ];
       
-              const achievmentsWrapper = document.querySelector(".swiper-wrapper");
+              // const achievmentsWrapper = document.querySelector(".swiper-wrapper");
       
-              if (achievmentsWrapper) {
-                for (let i = 0; i < 2; i++) {
-                  imgs.forEach((img) => {
-                    achievmentsWrapper.innerHTML += `
-                              <div class="swiper-slide py-6 px-20 rounded-xl">
-                                  <img src="../images/about/${img}.png" alt="achievement" />
-                              </div>
-                          `;
-                  });
-                }
-              }
+              // if (achievmentsWrapper) {
+              //   for (let i = 0; i < 2; i++) {
+              //     imgs.forEach((img) => {
+              //       achievmentsWrapper.innerHTML += `
+              //                 <div class="swiper-slide py-6 px-20 rounded-xl">
+              //                     <img src="../images/about/${img}.png" alt="achievement" />
+              //                 </div>
+              //             `;
+              //     });
+              //   }
+              // }
             });
           </script>
           <div class="swiper-container partners overflow-hidden">
-            <div class="swiper-wrapper mb-10"></div>
+            <div class="swiper-wrapper mb-10">
+              <div class="swiper-slide py-6 px-20 rounded-xl">
+                <img src="../images/about/Achievment-1.png" alt="achievement" />
+              </div>
+              <div class="swiper-slide py-6 px-20 rounded-xl">
+                <img src="../images/about/Achievment-2.png" alt="achievement" />
+              </div>
+              <div class="swiper-slide py-6 px-20 rounded-xl">
+                <img src="../images/about/Achievment-3.png" alt="achievement" />
+              </div>
+              <div class="swiper-slide py-6 px-20 rounded-xl">
+                <img src="../images/about/Achievment-4.png" alt="achievement" />
+              </div>
+            </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
