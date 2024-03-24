@@ -12,11 +12,12 @@ export default defineConfig({
                 main: './index.html',
                 components: './components.html',
                 ...inputPages,
-                mobMenu: './assets/mobMenu.js',
-                sliderAbout: './assets/sliderAbout.js'
+                'js/mobMenu': './assets/js/mobMenu.js',
+                'js/sliderAbout': './assets/js/sliderAbout.js'
             },
             output: {
-                assetFileNames: 'assets/[name].[ext]'
+                assetFileNames: 'assets/[name].[ext]',
+                entryFileNames: `assets/[name].js`,
             }
         },
         assetsInclude: ['images/**', 'assets/**'],
