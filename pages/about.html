@@ -4,18 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
-    <!-- swiper slider scripts -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- <script defer src="../assets/sliders/aboutSlider.js"></script> -->
+    <script defer src="../assets/js/mobMenu.js"></script>
+    <script defer src="../assets/js/sliderAbout.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="bg-slate-800">
@@ -58,7 +52,6 @@
               >•</span
             >
           </div>
-
           <a href="tel:+380800211927" class="text-grey-text font-bold mx-[7px]">
             0800 211 927
           </a>
@@ -100,7 +93,6 @@
           </div>
         </div>
       </div>
-
       <div
         class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
       >
@@ -120,7 +112,6 @@
             about us
           </h1>
         </div>
-
         <div class="flex flex-col gap-4 lg:items-end">
           <!-- mob menu -->
           <div
@@ -129,33 +120,6 @@
           >
             <span class="material-symbols-outlined text-main"> menu </span>
           </div>
-
-          <script defer>
-            document.addEventListener("DOMContentLoaded", () => {
-              const menuBtn = document.getElementById("mobMenu");
-              const menuContent = document.getElementById("mobModal");
-              const modalContent = document.querySelector(".modalContent")
-              const modalCloseBtn = document.querySelector(".modalClose");
-
-              menuBtn.addEventListener("click", () => {
-                  menuContent.classList.toggle("hidden");
-                  menuBtn.classList.toggle("bg-grey-separator");
-                  modalContent.classList.remove('fade-out-bottom');
-                  modalContent.classList.add('fade-in-bottom');
-              });
-
-              if (modalCloseBtn) {
-                modalCloseBtn.addEventListener("click", () => {
-                    modalContent.classList.remove('fade-in-bottom');
-                    modalContent.classList.add('fade-out-bottom');
-                    setTimeout(() => {
-                        menuContent.classList.add("hidden");
-                        menuBtn.classList.remove("bg-grey-separator");
-                    }, 300);
-                });
-              }
-            });
-          </script>
           <div
             class="relative z-10 hidden md:hidden"
             aria-labelledby="modal-title"
@@ -235,7 +199,6 @@
             </div>
           </div>
           <!-- end mob menu -->
-
           <!-- contacts -->
           <div class="hidden md:flex items-center gap-1.5 text-base">
             <div class="hidden lg:flex lg:items-center">
@@ -321,7 +284,6 @@
               </div>
             </div>
           </div>
-
           <!-- navigation -->
           <nav class="hidden md:flex">
             <ul
@@ -373,7 +335,6 @@
         </div>
       </div>
     </header>
-
     <!-- main -->
     <main class="bg-white">
       <!-- title  -->
@@ -488,40 +449,6 @@
           class="max-w-desc-wrapper m-auto relative flex flex-col gap-8 py-8 px-4"
         >
           <h2 class="uppercase text-h3 text-center">achievements</h2>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const swiper = new Swiper(".partners", {
-                slidesPerView: 4,
-                spaceBetween: 40,
-                pagination: {
-                  el: ".swiper-pagination",
-                  clickable: true,
-                },
-                autoplay: {
-                  delay: 2500,
-                  disableOnInteraction: false,
-                },
-                breakpoints: {
-                  300: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  996: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                  },
-                  1440: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                  },
-                },
-              });
-            });
-          </script>
           <div class="swiper-container partners overflow-hidden">
             <div class="swiper-wrapper mb-10">
               <div class="swiper-slide py-6 px-20 rounded-xl">
@@ -566,7 +493,6 @@
         </div>
       </section>
     </main>
-
     <footer class="bg-grey-bg px-[30px] md:px-[60px]">
       <div
         class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
