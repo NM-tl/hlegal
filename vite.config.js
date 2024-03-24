@@ -12,11 +12,10 @@ export default defineConfig({
                 main: './index.html',
                 components: './components.html',
                 ...inputPages,
-                mobMenu: './assets/js/mobMenu.js',
-                sliderAbout: './assets/js/sliderAbout.js'
+                mobMenu: './assets/mobMenu.js',
+                sliderAbout: './assets/sliderAbout.js'
             },
             output: {
-                chunkFileNames: 'assets/js/[name].js',
                 assetFileNames: 'assets/[name].[ext]'
             }
         },
