@@ -6,7 +6,7 @@ const pages = ['about', 'contact-modal', 'contact', 'publication', 'publications
 const inputPages = Object.fromEntries(pages.map(page => [page, `./pages/${page}.html`]));
 const jsFiles = fs.readdirSync('./assets/js').reduce((acc, file) => {
     if (file.endsWith('.js')) {
-        acc[`js/${file.replace('.js', '')}`] = `./assets/js/${file}`;
+        acc[`js/${file.replace('.js', '')}`] = `../assets/js/${file}`;
     }
     return acc;
 }, {});
