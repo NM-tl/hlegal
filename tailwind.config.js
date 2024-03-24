@@ -225,7 +225,7 @@ export default {
       "publications-lg": "1600px",
     },
     dropShadow: {
-      "team-shadow": "0px 25px 50px 0px rgba(40, 40, 86, 0.8)",
+      "team-shadow": "0px 15px 30px rgba(40, 40, 86, 0.8)",
     },
 
     plugins: [],
