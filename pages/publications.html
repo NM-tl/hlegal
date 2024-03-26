@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style.css" />
     <script defer src="../assets/js/mobMenu.js"></script>
     <script defer src="../assets/js/fbHover.js"></script>
+    <script defer src="../assets/js/togglePosts.js"></script>
   </head>
   <body class="bg-slate-800">
     <!-- header -->
@@ -336,13 +337,15 @@
       >
         <button
           type="button"
-          class="flex justify-center items-center rounded-[10px] bg-white w-[105px] h-[38px] font-main text-h4"
+          id="news"
+          class="flex justify-center items-center rounded-[10px] bg-white w-[105px] h-[38px] font-main text-h4 transition-all duration-500"
         >
           news
         </button>
         <button
           type="button"
-          class="flex justify-center items-center rounded-[10px] bg-transparent w-[122px] h-[38px] font-main text-h4 hover:bg-white"
+          id="articles"
+          class="flex justify-center items-center rounded-[10px] bg-transparent w-[122px] h-[38px] font-main text-h4 transition-all duration-500"
         >
           articles
         </button>
@@ -351,7 +354,7 @@
         class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
       >
         <!-- 1 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <img src="../images/publications/Publication-1.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
@@ -366,7 +369,7 @@
           </div>
         </a>
         <!-- 2 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <img src="../images/publications/Publication-2.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
@@ -383,7 +386,7 @@
           </div>
         </a>
         <!-- 3 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <img src="../images/publications/Publication-3.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
@@ -399,7 +402,7 @@
           </div>
         </a>
         <!-- 4 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <img src="../images/publications/Publication-4.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
@@ -415,7 +418,7 @@
           </div>
         </a>
         <!-- 5 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <img src="../images/publications/Publication-5.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
@@ -432,7 +435,7 @@
           </div>
         </a>
         <!-- 6 -->
-        <a href="./publication.html">
+        <a href="./publication.html" class="post">
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Currency control is dead, long live currency control!

@@ -16,7 +16,8 @@ export default defineConfig({
                 'js/mobMenu': './assets/js/mobMenu.js',
                 'js/sliderAbout': './assets/js/sliderAbout.js',
                 'js/modalCTA': './assets/js/modalCTA.js',
-                'js/fbHover': './assets/js/fbHover.js'
+                'js/fbHover': './assets/js/fbHover.js',
+                'js/togglePosts': './assets/js/togglePosts.js'
             },
             output: {
                 assetFileNames: 'assets/[name].[ext]',
