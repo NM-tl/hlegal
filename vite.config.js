@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { resolve } from "path";
 
 const pages = ['about', 'contact', 'publication', 'publications', 'service', 'services', 'team', 'teammate'];
 
