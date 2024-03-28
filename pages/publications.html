@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
     <link rel="stylesheet" href="../style.css" />
+    <script defer src="../assets/js/mobMenu.js"></script>
+    <script defer src="../assets/js/fbHover.js"></script>
+    <script defer src="../assets/js/togglePosts.js"></script>
   </head>
   <body class="bg-slate-800">
     <!-- header -->
@@ -34,14 +37,18 @@
         </div>
         <div class="md:flex items-center">
           <div class="hidden md:flex md:items-center">
-            <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+            <span class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
+              >•</span
+            >
             <a
               href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
               class="text-grey-text"
             >
               Kyiv, Mechnikova str, 14/1
             </a>
-            <span class="text-grey-text text-xl font-bold mx-[7px]">•</span>
+            <span class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
+              >•</span
+            >
           </div>
 
           <a href="tel:+380800211927" class="text-grey-text font-bold mx-[7px]">
@@ -89,28 +96,106 @@
       <div
         class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
       >
-        <!-- logo -->
         <div class="flex items-start gap-1.5">
           <img
             class="max-w-[70px] md:max-w-[130px]"
             src="../images/icons/Logo.svg"
             alt="logo"
           />
-          <span class="text-accent-color text-4xl font-bold">/</span>
+          <span class="text-accent-color text-4xl md:text-5xl font-bold"
+            >/</span
+          >
           <h1
             class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
           >
-            about us
+            publications
           </h1>
         </div>
 
         <div class="flex flex-col gap-4 lg:items-end">
-          <!-- menu -->
-          <div class="md:hidden">
-            <img src="../images/icons/menu.svg" alt="menu" />
+          <!-- mob menu -->
+          <div
+            class="md:hidden flex items-center py-2 px-2 rounded-lg"
+            id="mobMenu"
+          >
+            <span class="material-symbols-outlined text-main"> menu </span>
           </div>
-
-          <!-- contacts -->
+          <div
+            class="relative z-10 hidden md:hidden"
+            aria-labelledby="modal-title"
+            role="dialog"
+            id="mobModal"
+          >
+            <div class="fixed inset-0"></div>
+            <div class="fixed inset-0 z-50 w-screen overflow-y-auto">
+              <div
+                class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0 bottom-0"
+              >
+                <div
+                  class="transform origin-bottom overflow-hidden z-50 rounded-xl bg-white text-left shadow-xl transition-all duration-300 ease-in-out w-full max-w-[650px] pb-6 sm:my-8 absolute bottom-0"
+                  id="mobModal"
+                >
+                  <button
+                    type="button"
+                    class="modalClose absolute right-2 top-2 z-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-8 h-8 text-modal-close"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                  <div class="modalContent bg-white pt-10 px-3 flex flex-col">
+                    <ul
+                      class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
+                    >
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./about.html" class="w-full"> About us </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./services.html" class="w-full"> Services </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="./team.html" class="w-full"> Team </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a
+                          href="./publications.html"
+                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                        >
+                          Publications
+                        </a>
+                      </li>
+                      <li
+                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                      >
+                        <a href="../pages/contact.html" class="w-full">
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="hidden md:flex items-center gap-1.5 text-base">
             <div class="hidden lg:flex lg:items-center">
               <!-- language -->
@@ -134,7 +219,8 @@
 
               <div class="flex items-center">
                 <div class="flex items-center">
-                  <span class="text-grey-text text-xl font-bold mx-[7px]"
+                  <span
+                    class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
                     >•</span
                   >
                   <a
@@ -143,7 +229,8 @@
                   >
                     Kyiv, Mechnikova str, 14/1
                   </a>
-                  <span class="text-grey-text text-xl font-bold mx-[7px]"
+                  <span
+                    class="text-grey-text text-xl font-bold mx-[7px] opacity-40"
                     >•</span
                   >
                 </div>
@@ -193,14 +280,11 @@
               </div>
             </div>
           </div>
-
-          <!-- navigation -->
           <nav class="hidden md:flex">
             <ul
               class="flex w-full items-center text-active-regular font-bold text-base lowercase gap-4"
             >
               <li>
-                <!-- At first it will be active by default -->
                 <a
                   href="./about.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
@@ -234,7 +318,7 @@
               </li>
               <li>
                 <a
-                  href="./contact.html"
+                  href="../pages/contact.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Contact
@@ -253,26 +337,25 @@
       >
         <button
           type="button"
-          class="flex justify-center items-center rounded-[10px] bg-white w-[105px] h-[38px] font-main text-h4"
+          id="news"
+          class="flex justify-center items-center rounded-[10px] bg-white w-[105px] h-[38px] font-main text-h4 transition-all duration-500"
         >
           news
         </button>
         <button
           type="button"
-          class="flex justify-center items-center rounded-[10px] bg-transparent w-[122px] h-[38px] font-main text-h4 hover:bg-white"
+          id="articles"
+          class="flex justify-center items-center rounded-[10px] bg-transparent w-[122px] h-[38px] font-main text-h4 transition-all duration-500"
         >
           articles
         </button>
       </section>
-      <!-- Publicacions -->
       <section
         class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
       >
         <!-- 1 -->
-        <div>
-          <div
-            class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-1.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-          ></div>
+        <a href="./publication.html" class="post">
+          <img src="../images/publications/Publication-1.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Equity associate
@@ -284,12 +367,10 @@
               happened. Before entering my parents told me that if I…
             </p>
           </div>
-        </div>
+        </a>
         <!-- 2 -->
-        <div>
-          <div
-            class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-2.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-          ></div>
+        <a href="./publication.html" class="post">
+          <img src="../images/publications/Publication-2.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Penalty for the Good Corporation: what will happen to Google and
@@ -303,12 +384,10 @@
               Data Protection.
             </p>
           </div>
-        </div>
+        </a>
         <!-- 3 -->
-        <div>
-          <div
-            class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-3.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-          ></div>
+        <a href="./publication.html" class="post">
+          <img src="../images/publications/Publication-3.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Millennial Testament
@@ -321,12 +400,10 @@
               generation X looks like this: an apartment in…
             </p>
           </div>
-        </div>
+        </a>
         <!-- 4 -->
-        <div>
-          <div
-            class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-4.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-          ></div>
+        <a href="./publication.html" class="post">
+          <img src="../images/publications/Publication-4.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Language Law: How to Make Your Website Relevant
@@ -339,12 +416,10 @@
               Ukrainian-language site. Secondly, it is effective. IN…
             </p>
           </div>
-        </div>
+        </a>
         <!-- 5 -->
-        <div>
-          <div
-            class="w-[100%] h-[200px] bg-[url('../images/publications/Publication-5.jpg')] bg-no-repeat bg-center bg-cover rounded-t-lg"
-          ></div>
+        <a href="./publication.html" class="post">
+          <img src="../images/publications/Publication-5.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Reimbursement of the child's tuition fees in kindergarten and
@@ -358,9 +433,9 @@
               an official…
             </p>
           </div>
-        </div>
+        </a>
         <!-- 6 -->
-        <div>
+        <a href="./publication.html" class="post">
           <div class="p-[30px] flex flex-col gap-[15px]">
             <p class="text-h4 text-active-regular hover:text-accent-color">
               Currency control is dead, long live currency control!
@@ -374,22 +449,22 @@
               + v".
             </p>
           </div>
-        </div>
+        </a>
       </section>
       <!-- button  -->
       <section class="py-[30px] m-auto w-[100px]">
         <button
           type="button"
-          class="inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+          class="inline-flex items-center rounded-xl shadow-once bg-active-regular w-52 h-14 font-main text-link-font font-bold text-white transition-all hover:bg-active-hover active:bg-active-dark hover:scale-105"
         >
-          <p class="mx-auto">Send message</p>
+          <p class="mx-auto">More publications</p>
         </button>
       </section>
     </main>
-    <!-- footer  -->
-    <footer class="bg-white px-[30px] md:px-[60px]">
+    <!-- FOOTER -->
+    <footer class="bg-grey-bg px-[30px] pt-[30px] md:px-[60px]">
       <div
-        class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
+        class="py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
       >
         <div>
           <div class="flex flex-col items-center gap-[10px] md:flex-row">
@@ -402,7 +477,18 @@
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
           >
-            <img src="../images/footer/facebook.svg" alt="facebook" />
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular"
+            >
+              <path
+                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+              />
+            </svg>
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >

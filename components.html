@@ -498,7 +498,7 @@
     </div>
      <!-- footer -->
   <h2 class="text-hero-h1 text-white ml-5 mt-5">Footers:</h2>
-  <footer class="bg-white px-[30px] md:px-[60px]">
+  <footer class="bg-grey-bg px-[30px] md:px-[60px]">
     <div
       class="border-t-[2px] py-[30px] flex flex-col items-center gap-[30px] lg:flex-row lg:justify-between lg:items-start max-w-[1600px] m-auto"
     >
@@ -513,7 +513,6 @@
         <div
           class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
         >
-          <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
           <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverSvg cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 fill-current text-active-regular">
             <path
               d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
@@ -632,12 +631,34 @@
     document.addEventListener("DOMContentLoaded", function () {
       const consultationButton = document.querySelector(".modalBtn");
       const modal = document.querySelector(".modal");
+      const modalContent = document.querySelector(".modalContent");
       const cancelButtons = document.querySelectorAll(".modalClose");
 
-      const showModal = () => modal.classList.remove('hidden');
-      const hideModal = () => modal.classList.add('hidden');
+      const showModal = () => {
+          modal.classList.remove('hidden');
+          if (modalContent.classList.contains('fade-out-bottom')) {
+              modalContent.classList.remove('fade-out-bottom');
+              modalContent.classList.add('fade-in-bottom');
+          } else {
+              modalContent.classList.toggle('fade-in-bottom');
+          }
+      };
+
+      const hideModal = () => {
+          modalContent.classList.toggle('fade-in-bottom');
+          modalContent.classList.toggle('fade-out-bottom');
+          setTimeout(() => {
+              modal.classList.toggle('hidden');
+          }, 300);
+      };
 
       consultationButton.addEventListener("click", showModal);
+      modal.addEventListener("click", (event) => {
+        if (!modalContent.contains(event.target)) {
+            hideModal();
+        }
+      });
+
       modal.addEventListener("click", (event) => event.target === modal && hideModal());
 
       cancelButtons.forEach(button => {
@@ -651,9 +672,9 @@
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-          <div class="relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <button type="button" class="modalClose absolute right-4 top-1">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-modal-close">
+          <div class="modalContent relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:w-[650px]">
+            <button type="button" class="modalClose absolute rounded-lg right-5 top-5 transition-all hover:scale-105 hover:bg-grey-separator">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-modal-close">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
               </svg>              
             </button>
