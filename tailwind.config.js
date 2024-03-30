@@ -215,6 +215,7 @@ export default {
 
     /* Wrappers */
     maxWidth: {
+      "tiny-wrapper": "320px",
       "desc-wrapper": "1440px",
       xl: "1080px",
       lg: "1280px",
