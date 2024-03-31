@@ -18,7 +18,8 @@ export default defineConfig({
                 'js/fbHover': './assets/js/fbHover.js',
                 'js/togglePosts': './assets/js/togglePosts.js',
                 'js/sliderHome': './assets/js/sliderHome.js',
-                'js/tabs': './assets/js/tabs.js'
+                'js/tabs': './assets/js/tabs.js',
+                'js/smoothScroll': './assets/js/smoothScroll.js'                
             },
             output: {
                 assetFileNames: 'assets/[name].[ext]',
