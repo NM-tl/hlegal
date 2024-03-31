@@ -16,7 +16,7 @@
     <header class="bg-white px-[15px] md:px-[60px] md:pt-[20px] lg:pt-[50px]">
       <!-- first mobile -->
       <div
-        class="flex justify-between items-center py-[10px] md:justify-start md:py-[30px] lg:hidden"
+        class="flex justify-between items-center py-[10px] mb-[10px] md:justify-start md:py-[30px] lg:hidden"
       >
         <!-- language -->
         <div class="flex gap-1.5 text-grey-text font-bold">
@@ -98,21 +98,23 @@
         class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
       >
         <!-- logo -->
-        <div class="flex items-start gap-1.5">
-          <img
-            class="max-w-[70px] md:max-w-[130px]"
-            src="../images/icons/Logo.svg"
-            alt="logo"
-          />
-          <span class="text-accent-color text-4xl md:text-5xl font-bold"
-            >/</span
-          >
-          <h1
-            class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
-          >
-            contact
-          </h1>
-        </div>
+        <a href="../"
+          ><div class="flex items-start gap-1.5">
+            <img
+              class="max-w-[70px] md:max-w-[130px]"
+              src="../images/icons/Logo.svg"
+              alt="logo"
+            />
+            <span class="text-accent-color text-4xl md:text-5xl font-bold"
+              >/</span
+            >
+            <h1
+              class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
+            >
+              contact
+            </h1>
+          </div></a
+        >
 
         <div class="flex flex-col gap-4 lg:items-end">
           <!-- mob menu -->
@@ -160,40 +162,29 @@
                     <ul
                       class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
                     >
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2"
-                      >
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="about.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          About us </a>
+                      </li>
+                      <li class="flex justify-center w-4/5 items-center">
                         <a
-                          href="./about.html"
-                          class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                          href="services.html"
+                          class="transition-all bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"
                         >
-                          About us
+                          Services
                         </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./services.html" class="w-full"> Services </a>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="team.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          Team </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./team.html" class="w-full"> Team </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./publications.html" class="w-full">
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="publications.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
                           Publications
                         </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a
-                          href="../pages/contact.html"
-                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
-                        >
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="contact.html" class="bg-grey-bg w-full transition-all text-accent-color border-accent-color text-center rounded-xl py-2 text-2xl">
                           Contact
                         </a>
                       </li>
@@ -300,7 +291,7 @@
               <li>
                 <!-- At first it will be active by default -->
                 <a
-                  href="./about.html"
+                  href="about.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   About us
@@ -308,7 +299,7 @@
               </li>
               <li>
                 <a
-                  href="./services.html"
+                  href="services.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Services
@@ -316,7 +307,7 @@
               </li>
               <li>
                 <a
-                  href="./team.html"
+                  href="team.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Team
@@ -324,7 +315,7 @@
               </li>
               <li>
                 <a
-                  href="./publications.html"
+                  href="publications.html"
                   class="transition-all hover:text-active-hover pb-0.5 hover:border-b-2 hover:border-active-hover"
                 >
                   Publications
@@ -332,7 +323,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/contact.html"
+                  href="contact.html"
                   class="transition-all text-accent-color pb-0.5 border-b-2 border-accent-color"
                 >
                   Contact
@@ -345,19 +336,25 @@
     </header>
     <!-- main content -->
     <main
-      class="sd:w-9/12 sd:mx-auto md:flex-1 lg:flex lg:gap-14 lg:py-10 lg:max-w-lg md:mx-28 mx-auto max-w-mob-wrapper md:max-w-tab-wrapper"
+      class="sd:w-9/12 sd:mx-auto md:flex-1 lg:flex lg:gap-14 lg:py-10 lg:max-w-lg md:mx-28 mx-auto max-w-full md:max-w-tab-wrapper"
     >
-      <ul class="flex flex-col md:px-0 gap-7 px-10 py-10 lg:w-1/2">
+      <ul class="flex flex-col md:px-0 gap-7 px-8 py-[30px] lg:w-1/2">
         <li
           class="border-b-4 border-grey-bg-alt pb-7 text-h3-caps text-main font-normal"
         >
-          Kyiv, <br />Mechnikova str, 14
+          <a href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6">
+            Kyiv, <br />Mechnikova str, 14
+          </a>
         </li>
         <li class="flex flex-col gap-4 border-b-4 border-grey-bg-alt pb-7">
-          <p class="text-h3-caps text-main font-normal">0800 211 927</p>
-          <p class="text-h3-caps text-active-regular font-normal">
-            contact@forstudy.space
-          </p>
+          <a href="tel:+380800211927"
+            ><p class="text-h3-caps text-main font-normal">0800 211 927</p></a
+          >
+          <a href="mailto:contact@forstudy.space">
+            <p class="text-h3-caps text-active-regular font-normal">
+              contact@forstudy.space
+            </p></a
+          >
         </li>
         <li>
           <a
@@ -405,9 +402,9 @@
         </li>
       </ul>
       <div
-        class="mx-9 md:mx-auto lg:w-1/2 lg:me-0 bg-grey-bg rounded-xl py-7 md:max-w-tab-wrapper"
+        class="mx-[30px] md:mx-auto lg:w-1/2 lg:me-0 bg-grey-bg rounded-xl py-[30px] md:max-w-tab-wrapper"
       >
-        <ul class="flex flex-col gap-4 px-5">
+        <ul class="flex flex-col gap-4 px-[30px]">
           <li
             class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main"
           >
@@ -481,12 +478,17 @@
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >
-            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+            <a href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+              ><p
+                class="text-paragraph-12 text-active-regular mt-[2px] hover:text-accent-color"
+              >
+                ON MAP
+              </p></a
+            >
           </div>
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
           >
-            <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
             <svg
               width="38"
               height="38"

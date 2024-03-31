@@ -97,24 +97,29 @@
         class="mx-[15px] flex md:max-w-[1600px] md:mx-auto md:block items-center justify-between lg:flex"
       >
         <!-- logo -->
-        <div class="flex gap-1.5">
-          <img
-            class="max-w-[70px] md:max-w-[130px]"
-            src="../images/icons/Logo-dark.svg"
-            alt="logo"
-          />
-          <span class="text-accent-color text-4xl md:text-5xl font-bold"
-            >/</span
-          >
-          <h1
-            class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
-          >
-            services
-          </h1>
-        </div>
+        <a href="../">
+          <div class="flex gap-1.5">
+            <img
+              class="max-w-[70px] md:max-w-[130px]"
+              src="../images/icons/Logo-dark.svg"
+              alt="logo"
+            />
+            <span class="text-accent-color text-4xl md:text-5xl font-bold"
+              >/</span
+            >
+            <h1
+              class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
+            >
+              services
+            </h1>
+          </div></a
+        >
 
         <div class="flex flex-col gap-4 lg:items-end">
-          <div class="md:hidden flex items-center py-2 px-2 rounded-lg" id="mobMenu">
+          <div
+            class="md:hidden flex items-center py-2 px-2 rounded-lg"
+            id="mobMenu"
+          >
             <span class="material-symbols-outlined text-white"> menu </span>
           </div>
           <div
@@ -153,43 +158,35 @@
                   </button>
                   <div class="modalContent bg-white pt-10 px-3 flex flex-col">
                     <ul
-                      class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
-                    >
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
+                    class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
+                  >
+                    <li class="flex justify-center w-4/5 items-center">
+                      <a href="about.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                        About us </a>
+                    </li>
+                    <li class="flex justify-center w-4/5 items-center">
+                      <a
+                        href="services.html"
+                        class="bg-grey-bg w-full transition-all text-accent-color border-accent-color text-center rounded-xl py-2 text-2xl"
                       >
-                        <a href="./about.html" class="w-full"> About us </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a
-                          href="./services.html"
-                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
-                        >
-                          Services
-                        </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./team.html" class="w-full"> Team </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./publications.html" class="w-full">
-                          Publications
-                        </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="../pages/contact.html" class="w-full">
-                          Contact
-                        </a>
-                      </li>
-                    </ul>
+                        Services
+                      </a>
+                    </li>
+                    <li class="flex justify-center w-4/5 items-center">
+                      <a href="team.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                        Team </a>
+                    </li>
+                    <li class="flex justify-center w-4/5 items-center">
+                      <a href="publications.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
+                        Publications
+                      </a>
+                    </li>
+                    <li class="flex justify-center w-4/5 items-center">
+                      <a href="contact.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
                   </div>
                 </div>
               </div>
@@ -363,61 +360,103 @@
         <div
           class="flex items-center mx-auto justify-center pb-7 border-b-4 border-grey20-bg"
         >
-        <button
-          type="button"
-          class="modalBtn inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
-        >
-          <p class="mx-auto">Free consultation</p>
-        </button>
-        <div class="modalCTA relative z-10 hidden" aria-labelledby="modal-title" role="dialog">
-          <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+          <button
+            type="button"
+            class="modalBtn inline-flex items-center rounded-xl shadow-once bg-active-regular w-44 h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
+          >
+            <p class="mx-auto">Free consultation</p>
+          </button>
+          <div
+            class="modalCTA relative z-10 hidden"
+            aria-labelledby="modal-title"
+            role="dialog"
+          >
+            <div
+              class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            ></div>
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-              <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class="modalForm relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:w-[650px]">
-                  <button type="button" class="modalCloseForm absolute rounded-lg right-5 top-5 transition-all hover:scale-105 hover:bg-grey-separator">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-modal-close">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>              
+              <div
+                class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0"
+              >
+                <div
+                  class="modalForm relative transform overflow-hidden rounded-lg bg-grey-bg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:w-[650px]"
+                >
+                  <button
+                    type="button"
+                    class="modalCloseForm absolute rounded-lg right-5 top-5 transition-all hover:scale-105 hover:bg-grey-separator"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-8 h-8 text-modal-close"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
                   </button>
                   <div class="mx-auto bg-grey-bg rounded-xl py-7">
                     <ul class="flex flex-col gap-4 px-5">
-                        <li class="text-h2 bg-redText inline-block text-transparent bg-clip-text text-main">We would like to help you</li>
-                        <li><div class="relative rounded-xl">
-                            <input type="text" placeholder="Name" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                                invalid:border-[#FF0000] invalid:text-[#FF0000]
-                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                                "/>
-                        </div></li>
-                        <li><div class="relative rounded-xl">
-                            <input type="text" placeholder="Message" invalid class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950
-                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                                invalid:border-[#FF0000] invalid:text-[#FF0000]
-                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                                "/>
-                        </div></li>
-                        <li class="text-paragraph-12 text-grey-text uppercase mt-5">How to answer you?</li>
-                        <li><div class="relative rounded-xl">
-                            <input type="text" placeholder="Phone number" invalid class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                                invalid:border-[#FF0000] invalid:text-[#FF0000]
-                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                                "/>
-                        </div></li>
-                        <li><div class="relative rounded-xl">
-                            <input type="text" placeholder="Email" invalid class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950
-                                focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular
-                                disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none
-                                invalid:border-[#FF0000] invalid:text-[#FF0000]
-                                focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]
-                                "/>
-                        </div></li>
+                      <li
+                        class="max-w-tiny-wrapper md:max-w-publications-md md:text-nowrap text-h2 bg-redText inline-block text-transparent bg-clip-text text-main"
+                      >
+                        We would like to help you
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Name"
+                            invalid
+                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Message"
+                            invalid
+                            class="block w-full h-14 p-4 pb-24 pt-6 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder: placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li
+                        class="text-paragraph-12 text-grey-text uppercase mt-5"
+                      >
+                        How to answer you?
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Phone number"
+                            invalid
+                            class="block w-full h-14 p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative rounded-xl">
+                          <input
+                            type="text"
+                            placeholder="Email"
+                            invalid
+                            class="block h-14 w-full p-4 bg-white border rounded-xl text-main font-normal font-main text-link-font placeholder:text-grey-text placeholder:font-main placeholder-slate-950 focus:outline-none focus:border-active-regular focus:ring-1 focus:ring-active-regular disabled:bg-grey-bg-alt disabled:text-grey-text disabled:shadow-none invalid:border-[#FF0000] invalid:text-[#FF0000] focus:invalid:border-[#FF0000] focus:invalid:ring-[#FF0000]"
+                          />
+                        </div>
+                      </li>
                     </ul>
-                </div>
-                  <div class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                  </div>
+                  <div
+                    class="bg-grey-bg px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+                  >
                     <button
                       type="button"
                       class="modalCloseForm flex w-full items-center rounded-xl shadow-once bg-active-regular h-14 font-main text-link-font font-bold text-white hover:bg-active-hover active:bg-active-dark"
@@ -428,7 +467,7 @@
                 </div>
               </div>
             </div>
-        </div>
+          </div>
         </div>
         <h2 class="text-h3-caps font-bold text-white mt-7 ms-7">
           Services in this area:
@@ -501,7 +540,7 @@
       >
         <div class="flex flex-col gap-3">
           <a
-            href="#"
+            href="./publications.html"
             class="flex items-center gap-1 text-active-regular text-h3 uppercase w-fit transition-all hover:scale-105 hover:text-accent-color"
           >
             Publications
@@ -516,53 +555,77 @@
         <div
           class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
         >
-          <div class="bg-white rounded-xl">
-            <img src="../images/publications/Publication-1.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
-            <div class="p-[30px] flex flex-col gap-[15px]">
-              <p class="text-h4 text-active-regular hover:text-accent-color">
-                Equity associate
-              </p>
-              <p class="text-paragraph-12 text-grey-text">April 22</p>
-              <div class="border-t-[4px]"></div>
-              <p class="text-paragraph-14">
-                I'm a jun on projects. I am a co-owner of a law firm. How it
-                happened. Before entering my parents told me that if I…
-              </p>
-            </div>
-          </div>
+          <a href="./publication.html" class="group">
+            <div class="bg-white rounded-xl">
+              <img
+                src="../images/publications/Publication-1.jpg"
+                alt="post feature"
+                class="w-[100%] h-[200px] rounded-t-lg object-cover"
+              />
+              <div class="p-[30px] flex flex-col gap-[15px]">
+                <p
+                  class="text-h4 text-active-regular group-hover:text-accent-color"
+                >
+                  Equity associate
+                </p>
+                <p class="text-paragraph-12 text-grey-text">April 22</p>
+                <div class="border-t-[4px]"></div>
+                <p class="text-paragraph-14">
+                  I'm a jun on projects. I am a co-owner of a law firm. How it
+                  happened. Before entering my parents told me that if I…
+                </p>
+              </div>
+            </div></a
+          >
 
-          <div class="bg-white rounded-xl">
-            <img src="../images/publications/Publication-2.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
-            <div class="p-[30px] flex flex-col gap-[15px]">
-              <p class="text-h4 text-active-regular hover:text-accent-color">
-                Penalty for the Good Corporation: what will happen to Google and
-                others for violating the GDPR
-              </p>
-              <p class="text-paragraph-12 text-grey-text">September 29</p>
-              <div class="border-t-[4px]"></div>
-              <p class="text-paragraph-14">
-                And why the recovery of 50 million euros could be a fateful
-                precedent According to Mind.ua January 21 National Commission
-                for Data Protection.
-              </p>
-            </div>
-          </div>
+          <a href="./publication.html" class="group">
+            <div class="bg-white rounded-xl">
+              <img
+                src="../images/publications/Publication-2.jpg"
+                alt="post feature"
+                class="w-[100%] h-[200px] rounded-t-lg object-cover"
+              />
+              <div class="p-[30px] flex flex-col gap-[15px]">
+                <p
+                  class="text-h4 text-active-regular group-hover:text-accent-color"
+                >
+                  Penalty for the Good Corporation: what will happen to Google
+                  and others for violating the GDPR
+                </p>
+                <p class="text-paragraph-12 text-grey-text">September 29</p>
+                <div class="border-t-[4px]"></div>
+                <p class="text-paragraph-14">
+                  And why the recovery of 50 million euros could be a fateful
+                  precedent According to Mind.ua January 21 National Commission
+                  for Data Protection.
+                </p>
+              </div>
+            </div></a
+          >
 
-          <div class="bg-white rounded-xl">
-            <img src="../images/publications/Publication-3.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
-            <div class="p-[30px] flex flex-col gap-[15px]">
-              <p class="text-h4 text-active-regular hover:text-accent-color">
-                Millennial Testament
-              </p>
-              <p class="text-paragraph-12 text-grey-text">August 19</p>
-              <div class="border-t-[4px]"></div>
-              <p class="text-paragraph-14">
-                What and how modern vloggers, opinion leaders and
-                crypto-millionaires will inherit A typical legacy of the
-                Ukrainian generation X looks like this: an apartment in…
-              </p>
-            </div>
-          </div>
+          <a href="./publication.html" class="group">
+            <div class="bg-white rounded-xl">
+              <img
+                src="../images/publications/Publication-3.jpg"
+                alt="post feature"
+                class="w-[100%] h-[200px] rounded-t-lg object-cover"
+              />
+              <div class="p-[30px] flex flex-col gap-[15px]">
+                <p
+                  class="text-h4 text-active-regular group-hover:text-accent-color"
+                >
+                  Millennial Testament
+                </p>
+                <p class="text-paragraph-12 text-grey-text">August 19</p>
+                <div class="border-t-[4px]"></div>
+                <p class="text-paragraph-14">
+                  What and how modern vloggers, opinion leaders and
+                  crypto-millionaires will inherit A typical legacy of the
+                  Ukrainian generation X looks like this: an apartment in…
+                </p>
+              </div>
+            </div></a
+          >
         </div>
       </div>
     </section>
@@ -576,7 +639,13 @@
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >
-            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+            <a href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+              ><p
+                class="text-paragraph-12 text-active-regular mt-[2px] hover:text-accent-color"
+              >
+                ON MAP
+              </p></a
+            >
           </div>
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"

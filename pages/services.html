@@ -13,7 +13,7 @@
     <script defer src="../assets/js/mobMenu.js"></script>
     <script defer src="../assets/js/fbHover.js"></script>
   </head>
-  <body class="">
+  <body>
     <!-- header -->
     <header class="md:px-[60px] md:pt-[20px] lg:pt-[50px] bg-[#323264]">
       <!-- first mobile -->
@@ -96,23 +96,28 @@
         class="mx-[15px] flex md:max-w-[1600px] md:mx-auto md:block items-center justify-between lg:flex"
       >
         <!-- logo -->
-        <div class="flex gap-1.5">
-          <img
-            class="max-w-[70px] md:max-w-[130px]"
-            src="../images/icons/Logo-dark.svg"
-            alt="logo"
-          />
-          <span class="text-accent-color text-4xl md:text-5xl font-bold"
-            >/</span
-          >
-          <h1
-            class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
-          >
-            services
-          </h1>
-        </div>
+        <a href="../">
+          <div class="flex gap-1.5">
+            <img
+              class="max-w-[70px] md:max-w-[130px]"
+              src="../images/icons/Logo-dark.svg"
+              alt="logo"
+            />
+            <span class="text-accent-color text-4xl md:text-5xl font-bold"
+              >/</span
+            >
+            <h1
+              class="text-white font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
+            >
+              services
+            </h1>
+          </div></a
+        >
         <div class="flex flex-col gap-4 lg:items-end">
-          <div class="md:hidden flex items-center py-2 px-2 rounded-lg" id="mobMenu">
+          <div
+            class="md:hidden flex items-center py-2 px-2 rounded-lg"
+            id="mobMenu"
+          >
             <span class="material-symbols-outlined text-white"> menu </span>
           </div>
           <div
@@ -153,37 +158,29 @@
                     <ul
                       class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
                     >
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./about.html" class="w-full"> About us </a>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="about.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          About us </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
+                      <li class="flex justify-center w-4/5 items-center">
                         <a
-                          href="./services.html"
-                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                          href="services.html"
+                          class="bg-grey-bg w-full transition-all text-accent-color border-accent-color text-center rounded-xl py-2 text-2xl"
                         >
                           Services
                         </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./team.html" class="w-full"> Team </a>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="team.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          Team </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./publications.html" class="w-full">
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="publications.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
                           Publications
                         </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="../pages/contact.html" class="w-full">
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="contact.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
                           Contact
                         </a>
                       </li>
@@ -334,7 +331,6 @@
         >
           What can we do better than others?
         </h2>
-      <!-- services -->
         <div
           class="p-[30px] md:p-[60px] grid grid-cols-1 gap-[30px] md:grid-cols-2 md:gap-[60px] lg:grid-cols-3"
         >
@@ -344,7 +340,9 @@
             >
               <img src="../images/services/serv/Ecommerce.svg" alt="e-commerce" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               IT and e-commerce
             </p>
             <p class="text-paragraph-font text-white">
@@ -359,7 +357,9 @@
             >
               <img src="../images/services/serv/Support.svg" alt="support" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               Comprehensive daily legal support
             </p>
             <p class="text-paragraph-font text-white">
@@ -375,7 +375,9 @@
             >
               <img src="../images/services/serv/Coprorate.svg" alt="corporate" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               Structuring corporate relationships
             </p>
             <p class="text-paragraph-font text-white">
@@ -389,7 +391,9 @@
             >
               <img src="../images/services/serv/Trust.svg" alt="Trust" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               Building contractual relations
             </p>
             <p class="text-paragraph-font text-white">
@@ -405,7 +409,9 @@
             >
               <img src="../images/services/serv/Protection.svg" alt="Protection" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               Protection of business, intellectual property
             </p>
             <p class="text-paragraph-font text-white">
@@ -421,7 +427,9 @@
             >
               <img src="../images/services/serv/Court.svg" alt="Court" />
             </div>
-            <p class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color">
+            <p
+              class="text-h3-caps text-active-regular transition-colors group-hover:text-accent-color"
+            >
               Judicial representation
             </p>
             <p class="text-paragraph-font text-white">
@@ -437,12 +445,15 @@
       <div class="mx-[20px] h-[10px] rounded-b-lg bg-[#CACADB]"></div>
       <div class="mx-[40px] h-[10px] rounded-b-lg bg-[#E7E7F2]"></div>
     </div>
-
-    <h2 class="text-h3 text-main max-w-[210px] m-auto mb-[30px] mt-[60px] uppercase">
+    <h2
+      class="text-h3 text-main max-w-[210px] m-auto mb-[30px] mt-[60px] uppercase"
+    >
       They already trust us
     </h2>
     <!-- company -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <section
+      class="max-w-[1920px] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
       <div class="h-[120px] bg-hillel flex justify-center items-center">
         <img src="../images/services/clients/hillel.svg" alt="hillel" />
       </div>
@@ -512,12 +523,17 @@
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >
-            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+            <a href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+              ><p
+                class="text-paragraph-12 text-active-regular mt-[2px] hover:text-accent-color"
+              >
+                ON MAP
+              </p></a
+            >
           </div>
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
           >
-            <!-- <img src="../images/footer/facebook.svg" alt="facebook" /> -->
             <svg
               width="38"
               height="38"

@@ -15,7 +15,7 @@
     <header class="bg-white px-[15px] md:px-[60px] md:pt-[20px] lg:pt-[50px]">
       <!-- first mobile -->
       <div
-        class="flex justify-between items-center py-[10px] md:justify-start md:py-[30px] lg:hidden"
+        class="flex justify-between items-center py-[10px] mb-[10px] md:justify-start md:py-[30px] lg:hidden"
       >
         <!-- language -->
         <div class="flex gap-1.5 text-grey-text font-bold">
@@ -96,21 +96,23 @@
       <div
         class="flex md:max-w-[1600px] mx-auto md:block items-center justify-between lg:flex"
       >
-        <div class="flex items-start gap-1.5">
-          <img
-            class="max-w-[70px] md:max-w-[130px]"
-            src="../images/icons/Logo.svg"
-            alt="logo"
-          />
-          <span class="text-accent-color text-4xl md:text-5xl font-bold"
-            >/</span
-          >
-          <h1
-            class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
-          >
-            publications
-          </h1>
-        </div>
+        <a href="../">
+          <div class="flex items-start gap-1.5">
+            <img
+              class="max-w-[70px] md:max-w-[130px]"
+              src="../images/icons/Logo.svg"
+              alt="logo"
+            />
+            <span class="text-accent-color text-4xl md:text-5xl font-bold"
+              >/</span
+            >
+            <h1
+              class="text-main font-normal text-[20px] leading-[24px] relative top-1 md:text-[36px] md:leading-[43px] md:top-0"
+            >
+              publications
+            </h1>
+          </div>
+        </a>
 
         <div class="flex flex-col gap-4 lg:items-end">
           <!-- mob menu -->
@@ -158,35 +160,29 @@
                     <ul
                       class="flex flex-col w-full items-center text-active-regular font-bold text-base lowercase gap-4"
                     >
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./about.html" class="w-full"> About us </a>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="about.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          About us </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./services.html" class="w-full"> Services </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="./team.html" class="w-full"> Team </a>
-                      </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
+                      <li class="flex justify-center w-4/5 items-center">
                         <a
-                          href="./publications.html"
-                          class="transition-all text-accent-color border-accent-color w-full text-2xl"
+                          href="services.html"
+                          class="transition-all bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"
                         >
+                          Services
+                        </a>
+                      </li>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="team.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl"> 
+                          Team </a>
+                      </li>
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="publications.html" class="bg-grey-bg w-full transition-all text-accent-color border-accent-color text-center rounded-xl py-2 text-2xl">
                           Publications
                         </a>
                       </li>
-                      <li
-                        class="bg-grey-bg w-full text-center max-w-[335px] rounded-xl py-2 text-2xl"
-                      >
-                        <a href="../pages/contact.html" class="w-full">
+                      <li class="flex justify-center w-4/5 items-center">
+                        <a href="contact.html" class="bg-grey-bg w-full text-center rounded-xl py-2 text-2xl">
                           Contact
                         </a>
                       </li>
@@ -354,10 +350,16 @@
         class="mx-auto max-w-publications-xs md:max-w-publications-md lg:max-w-publications-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]"
       >
         <!-- 1 -->
-        <a href="./publication.html" class="post">
-          <img src="../images/publications/Publication-1.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
+        <a href="./publication.html" class="post group">
+          <img
+            src="../images/publications/Publication-1.jpg"
+            alt="post feature"
+            class="w-[100%] h-[200px] rounded-t-lg object-cover"
+          />
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Equity associate
             </p>
             <p class="text-paragraph-12 text-grey-text">April 22</p>
@@ -369,10 +371,16 @@
           </div>
         </a>
         <!-- 2 -->
-        <a href="./publication.html" class="post">
-          <img src="../images/publications/Publication-2.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
+        <a href="./publication.html" class="post group">
+          <img
+            src="../images/publications/Publication-2.jpg"
+            alt="post feature"
+            class="w-[100%] h-[200px] rounded-t-lg object-cover"
+          />
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Penalty for the Good Corporation: what will happen to Google and
               others for violating the GDPR
             </p>
@@ -386,10 +394,16 @@
           </div>
         </a>
         <!-- 3 -->
-        <a href="./publication.html" class="post">
-          <img src="../images/publications/Publication-3.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
+        <a href="./publication.html" class="post group">
+          <img
+            src="../images/publications/Publication-3.jpg"
+            alt="post feature"
+            class="w-[100%] h-[200px] rounded-t-lg object-cover"
+          />
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Millennial Testament
             </p>
             <p class="text-paragraph-12 text-grey-text">August 19</p>
@@ -402,10 +416,16 @@
           </div>
         </a>
         <!-- 4 -->
-        <a href="./publication.html" class="post">
-          <img src="../images/publications/Publication-4.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
+        <a href="./publication.html" class="post group">
+          <img
+            src="../images/publications/Publication-4.jpg"
+            alt="post feature"
+            class="w-[100%] h-[200px] rounded-t-lg object-cover"
+          />
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Language Law: How to Make Your Website Relevant
             </p>
             <p class="text-paragraph-12 text-grey-text">August 19</p>
@@ -418,10 +438,16 @@
           </div>
         </a>
         <!-- 5 -->
-        <a href="./publication.html" class="post">
-          <img src="../images/publications/Publication-5.jpg" alt="post feature" class="w-[100%] h-[200px] rounded-t-lg object-cover" />
+        <a href="./publication.html" class="post group">
+          <img
+            src="../images/publications/Publication-5.jpg"
+            alt="post feature"
+            class="w-[100%] h-[200px] rounded-t-lg object-cover"
+          />
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Reimbursement of the child's tuition fees in kindergarten and
               school
             </p>
@@ -435,9 +461,11 @@
           </div>
         </a>
         <!-- 6 -->
-        <a href="./publication.html" class="post">
+        <a href="./publication.html" class="post group">
           <div class="p-[30px] flex flex-col gap-[15px]">
-            <p class="text-h4 text-active-regular hover:text-accent-color">
+            <p
+              class="text-h4 text-active-regular group-hover:text-accent-color"
+            >
               Currency control is dead, long live currency control!
             </p>
             <p class="text-paragraph-12 text-grey-text">June 14, 2018</p>
@@ -452,7 +480,7 @@
         </a>
       </section>
       <!-- button  -->
-      <section class="py-[30px] m-auto w-[100px]">
+      <section class="py-[30px] w-full flex justify-center">
         <button
           type="button"
           class="inline-flex items-center rounded-xl shadow-once bg-active-regular w-52 h-14 font-main text-link-font font-bold text-white transition-all hover:bg-active-hover active:bg-active-dark hover:scale-105"
@@ -472,7 +500,13 @@
             <span class="hidden md:block text-grey-text text-xl font-bold"
               >•</span
             >
-            <p class="text-paragraph-12 text-active-regular">ON MAP</p>
+            <a href="https://maps.app.goo.gl/jkdU66KkE1YB5jYb6"
+              ><p
+                class="text-paragraph-12 text-active-regular mt-[2px] hover:text-accent-color"
+              >
+                ON MAP
+              </p></a
+            >
           </div>
           <div
             class="flex flex-col items-center gap-[10px] mt-[20px] md:flex-row"
