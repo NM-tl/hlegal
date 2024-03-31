@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
       autoplay: {
-        delay: 5000,
+        delay: 500000,
         disableOnInteraction: false,
       },
     });
